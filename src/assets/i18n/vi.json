@@ -1,0 +1,764 @@
+{
+  "meta": {
+    "lang": "vi",
+    "label": "Tiếng Việt",
+    "pageTitle": "Angular Handbook · Cẩm nang Angular"
+  },
+  "ui": {
+    "brand": "Angular Handbook",
+    "nav": {
+      "overview": "Tổng quan",
+      "curriculum": "Giáo trình",
+      "approach": "Phương pháp học",
+      "principles": "Nguyên tắc",
+      "sandboxCta": "Sandbox Signals",
+      "toggleSidebarAria": "Mở hoặc đóng danh mục giáo trình"
+    },
+    "language": {
+      "label": "Ngôn ngữ",
+      "en": "English",
+      "vi": "Tiếng Việt"
+    },
+    "sidebar": {
+      "title": "Cấu trúc kho lưu trữ",
+      "reviewedSuffix": "đã xem",
+      "trackProgressLabel": "Tiến độ lộ trình",
+      "overallLabel": "Tổng thể",
+      "trackCompleteLabel": "Hoàn thành lộ trình",
+      "progressBarAria": "Thanh tiến độ hoàn thành lộ trình học",
+      "markDoneAria": "Đánh dấu hoàn thành chuyên đề",
+      "searchPlaceholder": "Lọc 15 chuyên đề...",
+      "searchAria": "Lọc các chuyên đề Angular Handbook",
+      "clearFilterAria": "Xóa bộ lọc",
+      "tracks": {
+        "all": "Tất cả",
+        "core": "Nền tảng",
+        "reactive": "Phản ứng",
+        "architecture": "Kiến trúc"
+      },
+      "emptyTitle": "Không tìm thấy chuyên đề phù hợp",
+      "resetFilters": "Đặt lại bộ lọc",
+      "reviewedBadgeAria": "Đã hoàn thành"
+    },
+    "overview": {
+      "kicker": "Kho tri thức · Dựa trên angular.dev · 15 Chuyên đề",
+      "heroTitle": "Làm chủ kiến trúc Angular hiện đại một cách bài bản",
+      "startModuleCta": "Bắt đầu Bài 01",
+      "approachCta": "Phương pháp 6 bước",
+      "imageAlt": "Minh họa kỹ thuật đẳng cự mô phỏng các thành phần Angular mô-đun và luồng tín hiệu phản ứng",
+      "imageFallbackTitle": "Kiến trúc Angular Handbook",
+      "imageFallbackSubtitle": "15 thư mục chuyên đề từ nền tảng đến ví dụ thực tế",
+      "curriculumHeading": "Danh mục giáo trình",
+      "curriculumSubheading": "Chọn bất kỳ thư mục nào bên dưới để học khái niệm, cơ chế hoạt động, ví dụ mã nguồn và thực hành chuẩn.",
+      "curriculumStats": "15 thư mục · 5 sandbox tương tác",
+      "sandboxBadge": "Sandbox",
+      "minUnit": "phút",
+      "reviewedLabel": "Đã xem",
+      "openLabel": "Mở bài",
+      "relatedHeading": "Dự án liên quan",
+      "relatedDescription": "Cẩm nang tập trung vào việc hiểu sâu công nghệ, trong khi dự án thực hành áp dụng kiến thức đó để giải quyết bài toán thực tế.",
+      "tableHeaders": {
+        "repository": "Kho lưu trữ",
+        "purpose": "Mục đích",
+        "focus": "Trọng tâm"
+      },
+      "resourcesHeading": "Tài liệu học tập chính thức"
+    },
+    "topic": {
+      "studyUnit": "phút đọc",
+      "readingTimeLabel": "Thời gian đọc",
+      "minReadSuffix": "phút",
+      "markedReviewed": "Đã đánh dấu đã xem",
+      "markReviewed": "Đánh dấu đã xem",
+      "step1Kicker": "01. Khái niệm",
+      "step1Heading": "Nó là gì và vì sao tồn tại",
+      "step2Kicker": "02. Cơ chế hoạt động",
+      "step2Heading": "Cách vận hành bên dưới",
+      "step3Kicker": "03. Cách sử dụng",
+      "step3Heading": "Áp dụng như thế nào và khi nào",
+      "step4Kicker": "04. Ví dụ",
+      "copyCode": "Sao chép mã",
+      "copied": "Đã sao chép",
+      "step5Kicker": "05. Thực hành tốt nhất",
+      "step5Heading": "Mẫu khuyến nghị & lỗi cần tránh",
+      "recommended": "Khuyến nghị",
+      "avoidPitfalls": "Cần tránh",
+      "step6Kicker": "06. Tham chiếu thực tế",
+      "docLinkLabel": "Tài liệu angular.dev"
+    },
+    "approachView": {
+      "kicker": "Phương pháp luận · Angular Handbook",
+      "title": "Phương pháp học 6 bước",
+      "subtitle": "Mỗi thư mục chuyên đề trong Angular Handbook đều tuân theo quy trình sáu bước nhất quán, kết nối lý thuyết với triển khai thực tế.",
+      "ctaTitle": "Sẵn sàng áp dụng phương pháp này?",
+      "ctaSubtitle": "Mở ngay chuyên đề Signals & Reactive State cùng sandbox tương tác trực tiếp.",
+      "ctaButton": "Mở chuyên đề Signals"
+    },
+    "principlesView": {
+      "kicker": "Tiêu chuẩn cốt lõi · Angular Handbook",
+      "title": "Mục tiêu & Nguyên tắc cốt lõi",
+      "subtitle": "Các nguyên tắc giúp ghi chú học tập ngắn gọn, bám sát phiên bản Angular mới nhất và nêu rõ đánh đổi kỹ thuật.",
+      "objectivesHeading": "Mục tiêu của Cẩm nang",
+      "principlesHeading": "Nguyên tắc kỹ thuật"
+    },
+    "footer": {
+      "tagline": "Angular Handbook · Tài liệu tham chiếu chính: angular.dev",
+      "docs": "Tài liệu",
+      "tutorials": "Hướng dẫn",
+      "apiReference": "Tra cứu API"
+    }
+  },
+  "sandbox": {
+    "executedLive": "Chạy trực tiếp trên Angular 22",
+    "titles": {
+      "signals": "Sandbox Phản ứng Signals Trực tiếp",
+      "templates": "Sandbox Luồng Điều Khiển Template",
+      "components": "Sandbox Luồng Dữ Liệu input() & output()",
+      "di": "Sandbox Phân Cấp Injector (DI)",
+      "forms": "Sandbox Kiểm Tra Reactive Forms Định Kiểu",
+      "none": "Phòng Thực Hành Tương Tác"
+    },
+    "signals": {
+      "writableCount": "Writable Signal: count()",
+      "decrease": "Giảm",
+      "increase": "Tăng",
+      "reset": "Đặt lại",
+      "writableMultiplier": "Writable Signal: multiplier()",
+      "computedGraph": "Đồ thị computed() suy diễn",
+      "parityCheck": "Kiểm tra chẵn / lẻ",
+      "evenValue": "Số chẵn",
+      "oddValue": "Số lẻ"
+    },
+    "templates": {
+      "switchSelector": "Bộ chọn nhánh @switch",
+      "all": "Tất cả",
+      "core": "Nền tảng",
+      "reactive": "Phản ứng",
+      "simulateEmpty": "Mô phỏng nhánh @empty",
+      "emptyActive": "Đang bật rỗng",
+      "showItems": "Hiển thị mục",
+      "renderedOutput": "Kết quả @for được render (track item.id)",
+      "emptyRenderedTitle": "Khối @empty đã được render",
+      "emptyRenderedDesc": "Không có phần tử nào khớp với trạng thái danh sách hiện tại.",
+      "sampleItems": [
+        { "id": "sig", "name": "Trạng thái Signal", "category": "reactive" },
+        { "id": "ctl", "name": "Khối @for / @if", "category": "core" },
+        { "id": "di", "name": "DI Phân cấp", "category": "core" },
+        { "id": "rx", "name": "Tương tác RxJS", "category": "reactive" }
+      ]
+    },
+    "components": {
+      "parentScope": "Phạm vi Cha (truyền input() xuống)",
+      "parentPropLabel": "Thuộc tính Cha: badgeTitle()",
+      "eventsReceived": "Sự kiện nhận từ output() của Con",
+      "countLabel": "Số lần",
+      "lastLabel": "Gần nhất",
+      "noneYet": "Chưa có",
+      "childBoundary": "Ranh giới Component Con",
+      "receivedViaInput": "Nhận qua input()",
+      "untitledModule": "Chuyên đề chưa đặt tên",
+      "emitOutputCta": "Phát output() lên Cha",
+      "defaultBadgeTitle": "Chuyên đề Reactive Signals"
+    },
+    "di": {
+      "selectScope": "Chọn phạm vi Provider",
+      "rootScopeBtn": "providedIn: 'root'",
+      "componentScopeBtn": "Component providers: []",
+      "rootDescription": "Cả hai thẻ cùng cấp đều inject chung một thực thể singleton từ EnvironmentInjector.",
+      "componentDescription": "Mỗi component tạo ra một thực thể ElementInjector riêng biệt với trạng thái độc lập.",
+      "componentA": "Component A",
+      "componentB": "Component B",
+      "instanceLabel": "Thực thể",
+      "increment": "Tăng thêm"
+    },
+    "forms": {
+      "titleLabel": "Tiêu đề ghi chú chuyên đề (tối thiểu 4 ký tự)",
+      "titlePlaceholder": "Ví dụ: Signal Inputs",
+      "titleError": "Bắt buộc nhập (tối thiểu 4 ký tự).",
+      "emailLabel": "Email người phụ trách",
+      "emailPlaceholder": "dev@angular.dev",
+      "emailError": "Vui lòng nhập địa chỉ email hợp lệ.",
+      "liveState": "Trạng thái FormGroup trực tiếp",
+      "validationStatus": "Trạng thái hợp lệ",
+      "validLabel": "HỢP LỆ",
+      "invalidLabel": "CHƯA HỢP LỆ",
+      "defaultTitle": "Angular Signals"
+    }
+  },
+  "overviewContent": {
+    "tagline": "Kho lưu trữ học tập và hệ thống hóa kiến thức Angular hiện đại, bám sát tài liệu chính thức angular.dev.",
+    "overview": "Chuyên sâu khám phá và ghi chép có hệ thống các khái niệm, API, thực hành chuẩn và mẫu kiến trúc Angular — từ nền tảng cơ bản đến triển khai thực tế.",
+    "objectives": [
+      "Hệ thống hóa kiến thức Angular theo lộ trình rõ ràng và có cấu trúc.",
+      "Nắm vững nền tảng Angular, kiến trúc và cơ chế render cốt lõi.",
+      "Khám phá các API hiện đại như Signals, Control Flow và mẫu phát triển mới.",
+      "Ghi chép song song thực hành khuyến nghị và các lỗi thường gặp.",
+      "Cung cấp ví dụ cô đọng, chạy thử trực tiếp và tài liệu tham chiếu tái sử dụng.",
+      "Kết nối chặt chẽ lý thuyết nền tảng với bài toán thiết kế ứng dụng thực tế."
+    ],
+    "learningApproach": [
+      {
+        "step": "01",
+        "title": "Khái niệm",
+        "description": "Hiểu rõ tính năng hoặc API là gì và vì sao nó ra đời trong hệ sinh thái Angular."
+      },
+      {
+        "step": "02",
+        "title": "Cơ chế hoạt động",
+        "description": "Tìm hiểu cơ chế runtime, trình biên dịch và change detection phía sau."
+      },
+      {
+        "step": "03",
+        "title": "Cách sử dụng",
+        "description": "Nắm rõ cách áp dụng và thời điểm sử dụng hợp lý trong component hoặc service."
+      },
+      {
+        "step": "04",
+        "title": "Ví dụ",
+        "description": "Thực hành với các đoạn mã TypeScript và template ngắn gọn, tập trung."
+      },
+      {
+        "step": "05",
+        "title": "Thực hành tốt nhất",
+        "description": "Phân biệt cách viết chuẩn Angular hiện đại với các thói quen cũ dễ gây lỗi."
+      },
+      {
+        "step": "06",
+        "title": "Tham chiếu thực tế",
+        "description": "Xác định cách từng khái niệm được vận dụng trong một dự án hoàn chỉnh."
+      }
+    ],
+    "principles": [
+      "Ưu tiên tài liệu chính thức angular.dev thay cho các bài hướng dẫn lỗi thời.",
+      "Tập trung hiểu bản chất khái niệm thay vì học thuộc lòng API.",
+      "Dùng ví dụ thực tế và sandbox tương tác để kiểm chứng kiến thức.",
+      "Giữ ghi chú ngắn gọn, có cấu trúc và dễ tra cứu nhanh.",
+      "Ghi nhận các quyết định kiến trúc quan trọng, đánh đổi và bài học rút ra.",
+      "Luôn cập nhật nội dung theo chuẩn standalone và signal-first của Angular hiện đại."
+    ],
+    "learningResources": [
+      {
+        "label": "Angular.dev",
+        "url": "https://angular.dev",
+        "summary": "Trang chủ chính thức về tin tức, hướng dẫn và sandbox Angular hiện đại."
+      },
+      {
+        "label": "Tài liệu Angular",
+        "url": "https://angular.dev/overview",
+        "summary": "Kiến thức cốt lõi về components, signals, templates và routing."
+      },
+      {
+        "label": "Bài thực hành Angular",
+        "url": "https://angular.dev/tutorials",
+        "summary": "Chuỗi bài học tương tác trực tiếp trên trình duyệt."
+      },
+      {
+        "label": "Tra cứu API Angular",
+        "url": "https://angular.dev/api",
+        "summary": "Danh mục đầy đủ các API và cảnh báo thay thế trên toàn bộ gói @angular."
+      }
+    ],
+    "relatedProjects": [
+      {
+        "repository": "Angular Handbook",
+        "purpose": "Học tập, hệ thống hóa và tra cứu kiến thức Angular",
+        "focus": "Hiểu sâu bản chất công nghệ"
+      },
+      {
+        "repository": "Angular Real-world Project",
+        "purpose": "Áp dụng kiến thức Angular vào một ứng dụng hoàn chỉnh",
+        "focus": "Giải quyết bài toán kỹ thuật thực tế"
+      }
+    ]
+  },
+  "topics": [
+    {
+      "id": "fundamentals",
+      "order": "01",
+      "directory": "fundamentals/",
+      "title": "Khái niệm cốt lõi Angular",
+      "subtitle": "Kiến trúc standalone, khởi chạy ứng dụng và biên dịch template.",
+      "track": "core",
+      "trackLabel": "Nền tảng cốt lõi",
+      "readingMinutes": 6,
+      "sandboxType": "none",
+      "concept": "Angular là framework phát triển web bằng TypeScript xoay quanh standalone component, kiểm tra template tại thời điểm biên dịch và cơ chế phản ứng tinh gọn. Angular hiện đại loại bỏ NgModule bắt buộc để hướng tới các component độc lập và functional providers.",
+      "howItWorks": "Trong quá trình biên dịch, Angular compiler chuyển đổi HTML template thành các chỉ thị DOM tối ưu. Khi chạy, bootstrapApplication gắn component gốc, khởi tạo các provider như routing hay HTTP, và liên kết biểu thức phản ứng trực tiếp tới DOM.",
+      "usage": "Khởi chạy ứng dụng trong main.ts bằng bootstrapApplication(App, appConfig) và khai báo mọi component dưới dạng standalone với imports tường minh cùng ChangeDetectionStrategy.OnPush.",
+      "example": {
+        "title": "Khởi chạy ứng dụng Standalone",
+        "filename": "src/main.ts",
+        "code": "import { bootstrapApplication } from '@angular/platform-browser';\nimport { provideZonelessChangeDetection } from '@angular/core';\nimport { App } from './app/app';\n\nbootstrapApplication(App, {\n  providers: [\n    provideZonelessChangeDetection(),\n  ],\n});",
+        "explanation": "Khởi chạy trực tiếp bằng component gốc standalone giúp bỏ qua cấu trúc NgModule rườm rà và hỗ trợ tree-shaking hiệu quả."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Mặc định sử dụng standalone component với mảng imports rõ ràng.",
+          "Bật strict TypeScript và strictTemplates trong tsconfig.json.",
+          "Áp dụng zoneless change detection kết hợp signals để cập nhật giao diện chính xác."
+        ],
+        "pitfalls": [
+          "Tạo các NgModule dùng chung quá lớn làm giảm hiệu quả tree-shaking.",
+          "Lạm dụng $any() để bỏ qua kiểm tra kiểu dữ liệu trong template."
+        ]
+      },
+      "realWorldReference": "Trong dự án thực tế, main.ts và app.config.ts đóng vai trò điểm cấu hình trung tâm để nối router, HTTP interceptors và bộ xử lý lỗi.",
+      "officialDocUrl": "https://angular.dev/overview"
+    },
+    {
+      "id": "components",
+      "order": "02",
+      "directory": "components/",
+      "title": "Components & Giao tiếp dữ liệu",
+      "subtitle": "input(), output(), model() dạng signal, host bindings và vòng đời component.",
+      "track": "core",
+      "trackLabel": "Nền tảng cốt lõi",
+      "readingMinutes": 8,
+      "sandboxType": "components",
+      "concept": "Component đóng gói giao diện template, CSS và trạng thái cục bộ TypeScript. Angular hiện đại thay thế @Input() và @Output() bằng hàm signal input (input()), bộ phát sự kiện định kiểu (output()) và metadata host tường minh.",
+      "howItWorks": "Signal input trả về InputSignal<T> có tính phản ứng, tự động kết nối với computed() và template mà không cần ngOnChanges. Output phát dữ liệu có kiểu rõ ràng lên component cha thông qua OutputEmitterRef.",
+      "usage": "Dùng input.required<T>() cho thuộc tính bắt buộc, input(defaultValue) cho thuộc tính tùy chọn, output<T>() cho sự kiện người dùng và thuộc tính host trong @Component cho class hoặc sự kiện trên thẻ gốc.",
+      "example": {
+        "title": "Component với Signal Input & Output",
+        "filename": "src/app/topic-card.ts",
+        "code": "@Component({\n  selector: 'app-topic-card',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  host: { '[class.is-active]': 'active()' },\n  template: `\n    <h3>{{ title() }}</h3>\n    <button type=\"button\" (click)=\"selected.emit(id())\">Open</button>\n  `,\n})\nexport class TopicCard {\n  readonly id = input.required<string>();\n  readonly title = input.required<string>();\n  readonly active = input(false);\n  readonly selected = output<string>();\n}",
+        "explanation": "input() và output() dạng hàm giúp luồng dữ liệu một chiều rõ ràng đồng thời tự động tạo phụ thuộc phản ứng cho computed()."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Luôn đặt ChangeDetectionStrategy.OnPush cho mọi component.",
+          "Dùng thuộc tính host trong decorator thay cho @HostBinding và @HostListener.",
+          "Giữ mỗi component đảm nhiệm một trách nhiệm giao diện rõ ràng."
+        ],
+        "pitfalls": [
+          "Thay đổi trực tiếp thuộc tính bên trong object truyền qua input thay vì phát sự kiện cập nhật.",
+          "Đưa logic nghiệp vụ phức tạp hoặc gọi HTTP trực tiếp vào component trình bày."
+        ]
+      },
+      "realWorldReference": "Các UI primitive và thẻ tính năng trong codebase sản phẩm nhận DTO bất biến qua input() và báo thao tác lên container thông qua output().",
+      "officialDocUrl": "https://angular.dev/guide/components"
+    },
+    {
+      "id": "templates",
+      "order": "03",
+      "directory": "templates/",
+      "title": "Cú pháp Template & Control Flow",
+      "subtitle": "Khối @if, @for, @switch, @defer tích hợp sẵn và liên kết dữ liệu khai báo.",
+      "track": "core",
+      "trackLabel": "Nền tảng cốt lõi",
+      "readingMinutes": 7,
+      "sandboxType": "templates",
+      "concept": "Template Angular mở rộng HTML với các khối điều khiển tích hợp sẵn (@if, @for, @switch) và @defer. Cú pháp mới không cần import directive rời rạc, thu hẹp kiểu TypeScript chính xác và tối ưu hiệu năng cập nhật DOM.",
+      "howItWorks": "Trình biên dịch template biến đổi @if và @switch thành các lệnh rẽ nhánh gọn nhẹ. Khối @for bắt buộc khai báo track để Angular đối chiếu từng phần tử theo khóa định danh thay vì dựng lại toàn bộ danh sách.",
+      "usage": "Dùng @if / @else cho hiển thị có điều kiện, @for (item of items(); track item.id) kèm @empty cho danh sách, và @defer (on viewport) để tải lười các khối nặng.",
+      "example": {
+        "title": "Control Flow tích hợp hiện đại",
+        "filename": "src/app/module-list.html",
+        "code": "@if (modules().length > 0) {\n  @for (mod of modules(); track mod.id) {\n    <article>{{ mod.title }}</article>\n  } @empty {\n    <p>No matching modules.</p>\n  }\n} @else {\n  <p>Loading curriculum...</p>\n}",
+        "explanation": "Control flow nguyên bản thay thế hoàn toàn *ngIf và *ngFor, đồng thời bắt buộc dùng track key giúp tái sử dụng DOM tối ưu."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Luôn track vòng lặp @for bằng định danh duy nhất ổn định (track item.id).",
+          "Dùng class binding ([class.active]=\"isActive()\") thay cho ngClass.",
+          "Giữ biểu thức trong template đơn giản; chuyển xử lý phức tạp vào computed() hoặc pipe."
+        ],
+        "pitfalls": [
+          "Dùng track $index cho danh sách thường xuyên thêm, xóa hoặc sắp xếp lại.",
+          "Gọi hàm nặng không thuần khiết hoặc viết arrow function trực tiếp trong template."
+        ]
+      },
+      "realWorldReference": "Bảng dữ liệu có tìm kiếm, thanh điều hướng và dashboard nhiều trạng thái đều dùng @switch và @for kèm @empty để xử lý đủ các trạng thái tải, rỗng và có dữ liệu.",
+      "officialDocUrl": "https://angular.dev/guide/templates/control-flow"
+    },
+    {
+      "id": "directives",
+      "order": "04",
+      "directory": "directives/",
+      "title": "Directives tích hợp & tùy biến",
+      "subtitle": "Gắn hành vi DOM qua attribute và kết hợp bằng hostDirectives.",
+      "track": "core",
+      "trackLabel": "Nền tảng cốt lõi",
+      "readingMinutes": 6,
+      "sandboxType": "none",
+      "concept": "Directives cho phép gắn hành vi DOM hoặc quy tắc kiểm tra vào phần tử và component có sẵn mà không tạo thêm thẻ bao bọc. Angular còn hỗ trợ hostDirectives để ghép nhiều hành vi trực tiếp lên host của component.",
+      "howItWorks": "Khi selector thuộc tính khớp với phần tử trong template, Angular khởi tạo directive cùng element injector, cho phép truy cập ElementRef, host bindings và các service được inject.",
+      "usage": "Viết custom directive khi nhiều component dùng chung hành vi DOM như auto-focus, phản hồi sao chép clipboard, phát hiện click bên ngoài hoặc phím tắt.",
+      "example": {
+        "title": "Directive kích hoạt sao chép",
+        "filename": "src/app/directives/copy-trigger.ts",
+        "code": "@Directive({\n  selector: 'button[appCopyTrigger]',\n  host: {\n    '(click)': 'copyText()',\n    '[attr.data-copied]': 'copied()',\n  },\n})\nexport class CopyTrigger {\n  readonly text = input.required<string>({ alias: 'appCopyTrigger' });\n  readonly copied = signal(false);\n\n  async copyText() {\n    await navigator.clipboard.writeText(this.text());\n    this.copied.set(true);\n    setTimeout(() => this.copied.set(false), 1500);\n  }\n}",
+        "explanation": "Một attribute directive gọn nhẹ đóng gói logic Clipboard API và trạng thái phản hồi bằng signal mà không làm phình cấu trúc DOM."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Ghép các hành vi dùng chung vào component thông qua hostDirectives.",
+          "Ưu tiên host bindings hoặc Renderer2 thay vì gọi document.querySelector trực tiếp."
+        ],
+        "pitfalls": [
+          "Tự viết structural directive phức tạp trong khi @if hoặc @for đã giải quyết gọn.",
+          "Quên dọn dẹp các event listener gắn vào window khi directive bị hủy."
+        ]
+      },
+      "realWorldReference": "Các bộ thư viện UI doanh nghiệp dùng hostDirectives để tái sử dụng hành vi tooltip, focus-trap và kiểm soát hiển thị theo quyền.",
+      "officialDocUrl": "https://angular.dev/guide/directives"
+    },
+    {
+      "id": "dependency-injection",
+      "order": "05",
+      "directory": "dependency-injection/",
+      "title": "Dependency Injection & Providers",
+      "subtitle": "Hàm inject(), InjectionToken và cơ chế phân giải injector phân cấp.",
+      "track": "core",
+      "trackLabel": "Nền tảng cốt lõi",
+      "readingMinutes": 8,
+      "sandboxType": "di",
+      "concept": "Dependency Injection (DI) cung cấp class, cấu hình và service cho component hoặc hàm mà không cần khởi tạo cứng bên trong. Nhờ vậy service tách biệt khỏi nơi tiêu thụ và dễ thay thế khi viết kiểm thử.",
+      "howItWorks": "Angular duy trì hai cây injector song song: EnvironmentInjector (cho root và route) và ElementInjector (gắn theo cây DOM component). Khi gọi inject(Token), Angular tìm ngược lên cây element trước rồi mới tới cây environment.",
+      "usage": "Khai báo singleton bằng @Injectable({ providedIn: 'root' }), lấy phụ thuộc bằng hàm inject(Service) ở trường class, và định kiểu cấu hình bằng InjectionToken<T>.",
+      "example": {
+        "title": "InjectionToken định kiểu & inject()",
+        "filename": "src/app/core/api-config.ts",
+        "code": "export interface ApiConfig {\n  baseUrl: string;\n  timeoutMs: number;\n}\n\nexport const API_CONFIG = new InjectionToken<ApiConfig>('API_CONFIG', {\n  providedIn: 'root',\n  factory: () => ({ baseUrl: '/api', timeoutMs: 8000 }),\n});\n\n@Injectable({ providedIn: 'root' })\nexport class CatalogClient {\n  private readonly config = inject(API_CONFIG);\n  private readonly http = inject(HttpClient);\n}",
+        "explanation": "Hàm inject() giữ nguyên kiểu TypeScript chặt chẽ, dùng được cả trong functional guard và kết hợp tự nhiên với InjectionToken hỗ trợ tree-shaking."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Ưu tiên inject() thay cho constructor injection để kế thừa gọn và dùng được trong hàm độc lập.",
+          "Mặc định dùng providedIn: 'root' để loại bỏ service không sử dụng khỏi bundle.",
+          "Cấp provider ở mức component hoặc route khi cần tách biệt trạng thái theo từng phiên làm việc."
+        ],
+        "pitfalls": [
+          "Đăng ký cùng một stateful service ở cả root và component con gây ra hai thực thể tách rời ngoài ý muốn.",
+          "Gọi inject() bên ngoài injection context (ví dụ trong callback bất đồng bộ)."
+        ]
+      },
+      "realWorldReference": "Trình soạn thảo nhiều tab cung cấp một DraftState riêng cho từng tab qua providers của component, trong khi dùng chung một AuthSession ở root.",
+      "officialDocUrl": "https://angular.dev/guide/di"
+    },
+    {
+      "id": "routing",
+      "order": "06",
+      "directory": "routing/",
+      "title": "Angular Router",
+      "subtitle": "Lazy loading theo route, functional guards và gắn tham số URL vào input().",
+      "track": "core",
+      "trackLabel": "Nền tảng cốt lõi",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "Angular Router ánh xạ đường dẫn URL trình duyệt sang view component, quản lý lịch sử điều hướng, tải lười các gói tính năng khi cần và bảo vệ quá trình chuyển trang.",
+      "howItWorks": "Khi điều hướng, router đối chiếu URL với cây Routes, chạy các functional guard canActivate và resolver, tải động chunk từ loadComponent hoặc loadChildren rồi hiển thị view khớp vào <router-outlet>.",
+      "usage": "Cấu hình provideRouter(routes, withComponentInputBinding()) trong app.config.ts để tham số route và query params tự động truyền vào input() signal của component.",
+      "example": {
+        "title": "Lazy Route kèm Functional Guard",
+        "filename": "src/app/app.routes.ts",
+        "code": "export const routes: Routes = [\n  {\n    path: 'topics/:topicId',\n    canActivate: [() => inject(SessionGuard).isReady()],\n    loadComponent: () =>\n      import('./topics/topic-detail').then((m) => m.TopicDetail),\n  },\n];",
+        "explanation": "Dynamic import() tách mã nguồn tính năng thành chunk riêng, chỉ tải về khi người dùng thực sự truy cập route đó."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Tải lười mọi route tính năng lớn qua loadComponent hoặc loadChildren.",
+          "Viết CanActivateFn dạng hàm sử dụng inject().",
+          "Bật withComponentInputBinding() để đọc tham số :id như một signal input."
+        ],
+        "pitfalls": [
+          "Import trực tiếp các trang quản trị hoặc thống kê nặng vào bundle khởi đầu.",
+          "Quên khai báo route dự phòng (**) cho các đường dẫn không tồn tại."
+        ]
+      },
+      "realWorldReference": "Các ứng dụng lớn cô lập kích thước bundle theo từng miền route và kiểm soát quyền truy cập bằng functional router guard.",
+      "officialDocUrl": "https://angular.dev/guide/routing"
+    },
+    {
+      "id": "forms",
+      "order": "07",
+      "directory": "forms/",
+      "title": "Typed Reactive Forms",
+      "subtitle": "FormGroup, FormControl, validator tích hợp/tùy biến và theo dõi trạng thái.",
+      "track": "core",
+      "trackLabel": "Nền tảng cốt lõi",
+      "readingMinutes": 8,
+      "sandboxType": "forms",
+      "concept": "Reactive Forms mô hình hóa dữ liệu nhập thành cấu trúc bất biến định kiểu chặt chẽ trong TypeScript. Mỗi control cung cấp trạng thái hợp lệ đồng bộ, luồng thay đổi giá trị và cờ dirty/touched.",
+      "howItWorks": "Các thực thể FormControl và FormGroup tạo thành cây đồng bộ hai chiều với thẻ nhập liệu qua ControlValueAccessor (formControlName, formGroup). Các validator chạy tự động mỗi khi giá trị thay đổi.",
+      "usage": "Khởi tạo form có kiểu rõ ràng bằng NonNullableFormBuilder hoặc new FormGroup({ ... }), gắn Validators và kết nối với template qua [formGroup] và formControlName.",
+      "example": {
+        "title": "Reactive Form định kiểu kèm Validation",
+        "filename": "src/app/note-editor.ts",
+        "code": "readonly noteForm = new FormGroup({\n  title: new FormControl('', {\n    nonNullable: true,\n    validators: [Validators.required, Validators.minLength(4)],\n  }),\n  email: new FormControl('', {\n    nonNullable: true,\n    validators: [Validators.required, Validators.email],\n  }),\n});",
+        "explanation": "nonNullable: true đảm bảo form.getRawValue() luôn trả về kiểu string chuẩn thay vì string | null sau khi gọi reset()."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Dùng nhất quán Reactive Forms để đảm bảo chặt kiểu và dễ viết unit test.",
+          "Đặt nonNullable: true cho các trường reset về giá trị mặc định.",
+          "Hiển thị thông báo lỗi bằng cả văn bản rõ ràng và biểu tượng sau khi trường đã touched."
+        ],
+        "pitfalls": [
+          "Trộn lẫn ngModel với Reactive Forms trong cùng một biểu mẫu.",
+          "Hiển thị lỗi đỏ ngay khi người dùng chưa kịp tương tác vào ô nhập."
+        ]
+      },
+      "realWorldReference": "Quy trình thanh toán nhiều bước, trang cài đặt và bộ lọc động đều dựa trên FormArray định kiểu và Group Validator liên trường.",
+      "officialDocUrl": "https://angular.dev/guide/forms/reactive-forms"
+    },
+    {
+      "id": "http",
+      "order": "08",
+      "directory": "http/",
+      "title": "HttpClient & Interceptors",
+      "subtitle": "provideHttpClient(), functional interceptor, response định kiểu và hủy request.",
+      "track": "reactive",
+      "trackLabel": "Phản ứng & Dữ liệu",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "HttpClient là tầng giao tiếp HTTP tích hợp sẵn của Angular, hỗ trợ ép kiểu JSON response, hủy request tự động khi unsubscribe Observable, theo dõi tiến trình và chuỗi interceptor có thể kết hợp.",
+      "howItWorks": "Mỗi lời gọi HttpClient trả về một cold Observable bọc tầng Fetch hoặc XHR. Request đi lần lượt qua các hàm HttpInterceptorFn trước khi ra mạng và phản hồi đi ngược lại qua chuỗi interceptor.",
+      "usage": "Đăng ký provideHttpClient(withFetch(), withInterceptors([authInterceptor])) trong app.config.ts và gói các lời gọi API vào các repository service chuyên biệt.",
+      "example": {
+        "title": "Auth Interceptor dạng hàm",
+        "filename": "src/app/core/auth.interceptor.ts",
+        "code": "export const authInterceptor: HttpInterceptorFn = (req, next) => {\n  const token = inject(AuthStore).token();\n  if (!token) return next(req);\n\n  const authorizedReq = req.clone({\n    setHeaders: { Authorization: `Bearer ${token}` },\n  });\n  return next(authorizedReq);\n};",
+        "explanation": "Functional interceptor có thể gọi inject() trực tiếp để lấy signal/service và tạo bản sao HttpRequest bất biến qua req.clone()."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Bật withFetch() để tối ưu tương thích SSR hiện đại.",
+          "Định kiểu tường minh cho mọi lời gọi: this.http.get<TopicDto[]>(url).",
+          "Xử lý lỗi HTTP tập trung hoặc chuyển đổi thành trạng thái loading/error bằng signal."
+        ],
+        "pitfalls": [
+          "Chỉnh sửa trực tiếp header của HttpRequest gốc thay vì gọi req.clone().",
+          "Gọi HttpClient trực tiếp trong các component giao diện."
+        ]
+      },
+      "realWorldReference": "Tầng dữ liệu sản phẩm kết hợp HttpClient định kiểu với interceptor tự động thử lại và chuẩn hóa thông báo lỗi tập trung.",
+      "officialDocUrl": "https://angular.dev/guide/http"
+    },
+    {
+      "id": "signals",
+      "order": "09",
+      "directory": "signals/",
+      "title": "Signals & Trạng thái phản ứng",
+      "subtitle": "signal(), computed(), effect(), linkedSignal() và phản ứng chi tiết.",
+      "track": "reactive",
+      "trackLabel": "Phản ứng & Dữ liệu",
+      "readingMinutes": 9,
+      "sandboxType": "signals",
+      "concept": "Signal là vỏ bọc phản ứng quanh giá trị, thông báo chính xác tới nơi tiêu thụ mỗi khi giá trị thay đổi. Nhờ đó Angular biết chính xác phần template hay phép tính nào phụ thuộc vào trạng thái nào.",
+      "howItWorks": "Đọc một signal bên trong computed() hoặc template sẽ tự động đăng ký cạnh phụ thuộc trong đồ thị có hướng không chu trình. Khi gọi .set() hoặc .update(), chỉ các computed liên quan được đánh dấu tính lại khi cần mà không cần Zone.js.",
+      "usage": "Lưu trạng thái có thể thay đổi trong signal(), tính toán mọi giá trị suy diễn bằng computed(), tạo state cục bộ tự đặt lại bằng linkedSignal(), và chỉ dùng effect() cho tác vụ phụ bên ngoài như đồng bộ localStorage.",
+      "example": {
+        "title": "Bộ đếm phản ứng & Trạng thái suy diễn",
+        "filename": "src/app/signals-demo.ts",
+        "code": "readonly count = signal(2);\nreadonly multiplier = signal(3);\nreadonly product = computed(() => this.count() * this.multiplier());\nreadonly isEven = computed(() => this.product() % 2 === 0);\n\nincrement() {\n  this.count.update((n) => n + 1);\n}",
+        "explanation": "product và isEven tự động tính lại và ghi nhớ kết quả chỉ khi count hoặc multiplier thực sự thay đổi."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Dùng update() hoặc set() với giá trị bất biến; không sửa trực tiếp thuộc tính trong object của signal.",
+          "Ưu tiên computed() thay cho effect() mỗi khi suy diễn trạng thái từ trạng thái khác.",
+          "Dùng untracked() trong effect khi đọc giá trị không cần kích hoạt chạy lại effect."
+        ],
+        "pitfalls": [
+          "Ghi vào một signal khác bên trong effect() để đồng bộ state thay vì dùng computed() hoặc linkedSignal().",
+          "Ép signal làm luồng sự kiện trong khi Observable hoặc callback rõ ràng hơn."
+        ]
+      },
+      "realWorldReference": "Bộ tính toán tương tác, thanh lọc dữ liệu và giỏ hàng mô hình hóa dữ liệu gốc bằng writable signal và tổng tiền/danh sách lọc bằng computed().",
+      "officialDocUrl": "https://angular.dev/guide/signals"
+    },
+    {
+      "id": "rxjs",
+      "order": "10",
+      "directory": "rxjs/",
+      "title": "Observables & Tương tác RxJS",
+      "subtitle": "Chuỗi sự kiện bất đồng bộ, toán tử làm phẳng, toSignal() và takeUntilDestroyed().",
+      "track": "reactive",
+      "trackLabel": "Phản ứng & Dữ liệu",
+      "readingMinutes": 8,
+      "sandboxType": "none",
+      "concept": "RxJS phát huy sức mạnh khi điều phối các luồng sự kiện theo thời gian — như debounce ô tìm kiếm, hủy request HTTP cũ bằng switchMap hay ghép luồng WebSocket — trong khi Signals tối ưu cho trạng thái đồng bộ.",
+      "howItWorks": "Observable đẩy giá trị qua chuỗi toán tử thuần khiết khi có subscription. Bộ công cụ tương tác của Angular (toSignal, toObservable, takeUntilDestroyed) kết nối mượt mà luồng RxJS vào component dùng signal và tự động dọn dẹp.",
+      "usage": "Dùng switchMap để hủy các truy vấn tìm kiếm cũ, takeUntilDestroyed() để tránh rò rỉ bộ nhớ và toSignal() để tiêu thụ luồng bất đồng bộ ngay trong template.",
+      "example": {
+        "title": "Tìm kiếm Debounce với toSignal()",
+        "filename": "src/app/search-panel.ts",
+        "code": "private readonly searchService = inject(SearchService);\nreadonly queryControl = new FormControl('', { nonNullable: true });\n\nreadonly results = toSignal(\n  this.queryControl.valueChanges.pipe(\n    debounceTime(200),\n    distinctUntilChanged(),\n    switchMap((q) => this.searchService.find(q)),\n  ),\n  { initialValue: [] },\n);",
+        "explanation": "toSignal() tự động subscribe trong injection context, hủy đăng ký khi component bị xóa và trả về Signal thông thường cho template."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Dùng switchMap cho tác vụ đọc/tìm kiếm khi đầu vào mới thay thế đầu vào cũ.",
+          "Luôn quản lý vòng đời subscription bằng toSignal(), async pipe hoặc takeUntilDestroyed()."
+        ],
+        "pitfalls": [
+          "Lồng subscribe() bên trong một subscribe() khác thay vì làm phẳng bằng switchMap hoặc exhaustMap.",
+          "Quên dùng exhaustMap khi gửi form khiến người dùng bấm đúp tạo nhiều request trùng."
+        ]
+      },
+      "realWorldReference": "Thanh tìm kiếm gợi ý nhanh, bộ theo dõi định kỳ và tính năng tự động lưu sử dụng toán tử thời gian RxJS nối sang signal giao diện.",
+      "officialDocUrl": "https://angular.dev/ecosystem/rxjs-interop"
+    },
+    {
+      "id": "state-management",
+      "order": "11",
+      "directory": "state-management/",
+      "title": "Mẫu quản lý trạng thái",
+      "subtitle": "Signal store, luồng dữ liệu một chiều và cập nhật bất biến.",
+      "track": "reactive",
+      "trackLabel": "Phản ứng & Dữ liệu",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "Quản lý trạng thái giúp đồng bộ dữ liệu dùng chung giữa nhiều component và route một cách dễ dự đoán. Angular hiện đại ưu tiên các store service gọn nhẹ dựa trên signal với trạng thái ghi ẩn bên trong và selector chỉ đọc bên ngoài.",
+      "howItWorks": "Một store service giữ các signal() ở phạm vi private, công khai bản .asReadonly() cùng các computed() selector, và gom mọi thao tác thay đổi trạng thái vào các phương thức hành động tường minh.",
+      "usage": "Giữ state giao diện cục bộ trong component, nâng lên signal store theo route cho luồng nghiệp vụ và chỉ dùng root store cho dữ liệu phiên hoặc tùy chọn toàn ứng dụng.",
+      "example": {
+        "title": "Signal Store Service đóng gói",
+        "filename": "src/app/state/bookmarks.store.ts",
+        "code": "@Injectable({ providedIn: 'root' })\nexport class BookmarksStore {\n  private readonly _ids = signal<string[]>([]);\n  readonly ids = this._ids.asReadonly();\n  readonly count = computed(() => this._ids().length);\n\n  toggle(id: string) {\n    this._ids.update((list) =>\n      list.includes(id) ? list.filter((x) => x !== id) : [...list, id],\n    );\n  }\n}",
+        "explanation": "Công khai asReadonly() ngăn component bên ngoài gọi .set() tùy tiện, bảo toàn luồng cập nhật một nguồn duy nhất."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Tách biệt cache dữ liệu máy chủ, trạng thái URL và trạng thái giao diện tạm thời.",
+          "Chỉ xuất readonly signal và computed view thay vì writable signal thô."
+        ],
+        "pitfalls": [
+          "Nhân bản tham số URL vào global store khiến hai nơi dễ lệch nhau.",
+          "Áp dụng kiến trúc Redux cồng kềnh cho những trạng thái chỉ thuộc phạm vi một component."
+        ]
+      },
+      "realWorldReference": "Các ứng dụng workspace giữ bộ lọc đang chọn trên query URL, thực thể nghiệp vụ trong feature store và tiến độ học tập lưu cục bộ.",
+      "officialDocUrl": "https://angular.dev/guide/signals"
+    },
+    {
+      "id": "performance",
+      "order": "12",
+      "directory": "performance/",
+      "title": "Tối ưu hóa & Hiệu năng",
+      "subtitle": "Zoneless change detection, OnPush, khối @defer và NgOptimizedImage.",
+      "track": "architecture",
+      "trackLabel": "Kiến trúc & Chất lượng",
+      "readingMinutes": 8,
+      "sandboxType": "none",
+      "concept": "Tối ưu hiệu năng Angular tập trung vào ba mục tiêu: thu gọn kích thước JavaScript khởi đầu, giảm thao tác đối chiếu DOM và loại bỏ các lượt kiểm tra thay đổi dư thừa.",
+      "howItWorks": "Chế độ zoneless kết hợp OnPush đảm bảo Angular chỉ render lại những phần view có signal hoặc input thực sự thay đổi. Khối @defer tách các widget nặng thành chunk tải lười khi cuộn tới hoặc khi tương tác.",
+      "usage": "Bật provideZonelessChangeDetection(), giữ ChangeDetectionStrategy.OnPush trên mọi component, bọc biểu đồ/trình soạn thảo nặng bằng @defer (on viewport) và tối ưu ảnh tĩnh với NgOptimizedImage.",
+      "example": {
+        "title": "Trì hoãn tải khối biểu đồ nặng với @defer",
+        "filename": "src/app/analytics-page.html",
+        "code": "@defer (on viewport) {\n  <app-metrics-chart [series]=\"chartData()\" />\n} @placeholder (minimum 200ms) {\n  <div class=\"h-64 bg-slate-100 rounded-xl\">Chart loads on scroll</div>\n} @loading {\n  <p>Preparing visualization...</p>\n}",
+        "explanation": "@defer giúp các thư viện biểu đồ lớn không làm chậm quá trình hiển thị nội dung đầu tiên của trang."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Kiểm soát ngân sách bundle trong angular.json và tải lười theo từng route.",
+          "Luôn dùng @defer kèm @placeholder để tránh xô lệch bố cục (CLS).",
+          "Khai báo kích thước width/height rõ ràng cho ảnh để ổn định khung hình."
+        ],
+        "pitfalls": [
+          "Import cả thư viện tiện ích lớn khi chỉ sử dụng một vài hàm nhỏ.",
+          "Sắp xếp hoặc lọc mảng lớn trực tiếp trong getter của template mà không bọc bằng computed()."
+        ]
+      },
+      "realWorldReference": "Các cổng nội dung lớn dùng @defer (on interaction) cho sandbox mã nguồn và khung bình luận để trải nghiệm đọc chính luôn mượt mà.",
+      "officialDocUrl": "https://angular.dev/best-practices/runtime-performance"
+    },
+    {
+      "id": "testing",
+      "order": "13",
+      "directory": "testing/",
+      "title": "Kiểm thử Unit & Tích hợp",
+      "subtitle": "TestBed, kiểm chứng trạng thái signal, component harness và HttpTestingController.",
+      "track": "architecture",
+      "trackLabel": "Kiến trúc & Chất lượng",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "Kiểm thử Angular đáng tin cậy tập trung xác minh hợp đồng công khai của component — DOM được render, sự kiện phát ra, validation biểu mẫu và trạng thái service — thay vì kiểm tra chi tiết nội bộ dễ vỡ.",
+      "howItWorks": "TestBed dựng môi trường component cô lập, đồng bộ cập nhật signal qua fixture.whenStable() hoặc TestBed.flushEffects(), và giả lập mạng an toàn bằng provideHttpClientTesting().",
+      "usage": "Kiểm thử các hàm thuần túy và signal store trực tiếp không cần TestBed, còn với tương tác DOM hãy dùng TestBed kết hợp ComponentFixture hoặc Angular Material Harnesses.",
+      "example": {
+        "title": "Kiểm thử Signal Component",
+        "filename": "src/app/topic-card.spec.ts",
+        "code": "const fixture = TestBed.createComponent(TopicCard);\nfixture.componentRef.setInput('id', 'signals');\nfixture.componentRef.setInput('title', 'Signals & State');\nawait fixture.whenStable();\n\nexpect(fixture.nativeElement.textContent).toContain('Signals & State');",
+        "explanation": "componentRef.setInput() kiểm tra đúng luồng truyền signal input và cập nhật OnPush trong môi trường zoneless."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Truy vấn phần tử DOM thông qua role, nhãn truy cập và nội dung hiển thị.",
+          "Dùng provideHttpClientTesting() và HttpTestingController để kiểm tra payload request."
+        ],
+        "pitfalls": [
+          "Kiểm tra các thuộc tính private thay vì hành vi hiển thị và output của component.",
+          "Để unit test gọi ra mạng thật."
+        ]
+      },
+      "realWorldReference": "Quy trình CI kết hợp unit test tốc độ cao cho store/validator với integration test cho các luồng người dùng trọng yếu.",
+      "officialDocUrl": "https://angular.dev/guide/testing"
+    },
+    {
+      "id": "architecture",
+      "order": "14",
+      "directory": "architecture/",
+      "title": "Kiến trúc & Mẫu thiết kế",
+      "subtitle": "Phân ranh giới miền nghiệp vụ, tách smart/presentational và bố cục thư mục chuẩn.",
+      "track": "architecture",
+      "trackLabel": "Kiến trúc & Chất lượng",
+      "readingMinutes": 8,
+      "sandboxType": "none",
+      "concept": "Codebase Angular dễ bảo trì được tổ chức theo miền nghiệp vụ thay vì gom theo loại file kỹ thuật, tách bạch tầng core dùng chung, các thành phần UI thuần túy và từng feature độc lập.",
+      "howItWorks": "Quy tắc phụ thuộc chặt chẽ ngăn liên kết chéo giữa các feature: core/ chứa hạ tầng toàn app, shared/ chứa UI primitive và pipe thuần túy, còn các features/ giao tiếp qua URL router hoặc facade.",
+      "usage": "Tách rõ smart container component (inject store/router) khỏi presentational component (chỉ giao tiếp qua input() và output()).",
+      "example": {
+        "title": "Cấu trúc thư mục theo miền nghiệp vụ",
+        "filename": "src/app/ARCHITECTURE.txt",
+        "code": "src/app/\n├── core/            # Auth, HTTP interceptors, cấu hình toàn cục\n├── shared/          # UI primitives thuần túy, pipes, directives\n└── features/\n    ├── curriculum/  # Routes, store, smart & UI components\n    └── sandbox/     # Tính năng phòng thực hành cô lập",
+        "explanation": "Nhóm mã theo tính năng giữ routes, state store và tests đi liền nhau, đồng thời giúp lazy loading tự nhiên."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Giữ presentation component không phụ thuộc vào backend hoặc store.",
+          "Áp dụng luồng import một chiều: features -> shared/core, tuyệt đối không để core -> features."
+        ],
+        "pitfalls": [
+          "Đẩy mọi component của toàn dự án vào một thư mục shared/ khổng lồ.",
+          "Tạo phụ thuộc vòng giữa các service của nhiều feature."
+        ]
+      },
+      "realWorldReference": "Các đội ngũ kỹ thuật lớn phân chia quyền sở hữu theo từng thư mục feature để phát triển song song ít xung đột.",
+      "officialDocUrl": "https://angular.dev/style-guide"
+    },
+    {
+      "id": "examples",
+      "order": "15",
+      "directory": "examples/",
+      "title": "Ví dụ thực tế & Thử nghiệm",
+      "subtitle": "Kết hợp signals, reactive forms, DI và control flow trong các mẫu hoàn chỉnh.",
+      "track": "architecture",
+      "trackLabel": "Kiến trúc & Chất lượng",
+      "readingMinutes": 6,
+      "sandboxType": "signals",
+      "concept": "Thư mục examples là cầu nối giữa học khái niệm và kỹ thuật thực chiến, kết hợp nhiều thành phần Angular — typed forms, signals, computed views và template gọn gàng — trong các bài thử nghiệm tập trung.",
+      "howItWorks": "Mỗi thử nghiệm kiểm chứng một vòng lặp tương tác cụ thể: thu nhận đầu vào sạch sẽ, biến đổi trạng thái bất biến bằng signal và render phản hồi nhất quán lên giao diện.",
+      "usage": "Tạo các thử nghiệm nhỏ cô lập để kiểm chứng API Angular mới hoặc đánh giá hiệu năng trước khi đưa vào codebase sản phẩm.",
+      "example": {
+        "title": "Thử nghiệm lọc danh sách tức thì",
+        "filename": "src/app/examples/filter-experiment.ts",
+        "code": "readonly searchControl = new FormControl('', { nonNullable: true });\nreadonly query = toSignal(this.searchControl.valueChanges, { initialValue: '' });\n\nreadonly filteredItems = computed(() => {\n  const q = this.query().trim().toLowerCase();\n  return this.items().filter((item) => item.toLowerCase().includes(q));\n});",
+        "explanation": "Kết hợp FormControl của Reactive Forms với toSignal() và computed() tạo bộ lọc tức thì mà không cần code dư thừa."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Giữ mỗi thử nghiệm nhỏ gọn và tập trung vào một giả thuyết rõ ràng.",
+          "Ghi chú lý do mẫu đó hiệu quả và trường hợp nào nên chọn hướng khác."
+        ],
+        "pitfalls": [
+          "Sao chép nguyên xi code thử nghiệm sang sản phẩm mà thiếu xử lý lỗi và kiểm thử."
+        ]
+      },
+      "realWorldReference": "Chính ứng dụng Angular Handbook này áp dụng mẫu trên: kết hợp tìm kiếm bằng FormControl, lưu tiến độ bằng signal và component standalone.",
+      "officialDocUrl": "https://angular.dev/tutorials"
+    }
+  ]
+}
