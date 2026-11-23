@@ -1,0 +1,748 @@
+@let ui = i18n.ui();
+@let ov = i18n.overview();
+
+<div class="ah-app-shell">
+  <!-- Top Bar Contract: 3 zones separated by gap-8 -->
+  <header class="ah-header">
+    <div class="ah-header-inner">
+      <!-- Zone 1: Single text wordmark -->
+      <div class="is-flex is-align-items-center" style="gap: 0.75rem;">
+        <button
+          type="button"
+          (click)="progress.toggleMobileSidebar()"
+          class="button is-small is-white ah-mobile-only"
+          style="border-color: #e2e8f0;"
+          [attr.aria-label]="ui.nav.toggleSidebarAria"
+        >
+          <span class="icon is-small"><mat-icon class="ah-icon-md">menu</mat-icon></span>
+        </button>
+        <button
+          type="button"
+          (click)="setView('overview')"
+          class="ah-brand-btn"
+        >
+          {{ ui.brand }}
+        </button>
+      </div>
+
+      <!-- Zone 2: 4 concise single-line nav links -->
+      <nav class="ah-nav-links" aria-label="Primary Navigation">
+        <button
+          type="button"
+          (click)="setView('overview')"
+          class="ah-nav-link"
+          [class.is-active]="progress.activeView() === 'overview'"
+        >
+          {{ ui.nav.overview }}
+        </button>
+        <button
+          type="button"
+          (click)="setView('topic')"
+          class="ah-nav-link"
+          [class.is-active]="progress.activeView() === 'topic'"
+        >
+          {{ ui.nav.curriculum }}
+        </button>
+        <button
+          type="button"
+          (click)="setView('approach')"
+          class="ah-nav-link"
+          [class.is-active]="progress.activeView() === 'approach'"
+        >
+          {{ ui.nav.approach }}
+        </button>
+        <button
+          type="button"
+          (click)="setView('principles')"
+          class="ah-nav-link"
+          [class.is-active]="progress.activeView() === 'principles'"
+        >
+          {{ ui.nav.principles }}
+        </button>
+      </nav>
+
+      <!-- Zone 3: 1 Primary Action -->
+      <div class="is-flex is-align-items-center" style="flex-shrink: 0;">
+        <button
+          type="button"
+          (click)="progress.openInteractiveSandbox()"
+          class="button is-dark is-small has-text-weight-medium"
+        >
+          <span class="icon is-small"><mat-icon class="ah-icon-xs">science</mat-icon></span>
+          <span>{{ ui.nav.sandboxCta }}</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main 2-Zone Workspace -->
+  <div class="ah-workspace">
+    <!-- Mobile Drawer Backdrop -->
+    @if (progress.mobileSidebarOpen()) {
+      <div
+        (click)="progress.closeMobileSidebar()"
+        class="ah-backdrop ah-mobile-only"
+        aria-hidden="true"
+      ></div>
+    }
+
+    <!-- Left Curriculum Sidebar -->
+    <aside
+      class="ah-sidebar"
+      [class.is-open]="progress.mobileSidebarOpen()"
+      aria-label="Repository Structure Index"
+    >
+      <div class="ah-sidebar-sticky">
+        <!-- Language Switcher + Progress + Search -->
+        <div class="ah-sidebar-controls">
+          <!-- Language Switcher -->
+          <div class="is-flex is-justify-content-space-between is-align-items-center pb-2" style="border-bottom: 1px solid #f1f5f9;">
+            <span class="icon-text is-size-7 has-text-weight-medium ah-text-muted">
+              <span class="icon is-small"><mat-icon class="ah-icon-xs">translate</mat-icon></span>
+              <span>{{ ui.language.label }}</span>
+            </span>
+            <div class="ah-segmented" role="group" [attr.aria-label]="ui.language.label">
+              <button
+                type="button"
+                (click)="setLanguage('en')"
+                class="ah-seg-btn"
+                [class.is-active]="i18n.lang() === 'en'"
+              >
+                {{ ui.language.en }}
+              </button>
+              <button
+                type="button"
+                (click)="setLanguage('vi')"
+                class="ah-seg-btn"
+                [class.is-active]="i18n.lang() === 'vi'"
+              >
+                {{ ui.language.vi }}
+              </button>
+            </div>
+          </div>
+
+          <!-- Track Progress Indicator -->
+          <div>
+            <div class="is-flex is-justify-content-space-between is-align-items-center is-size-7 mb-2" style="gap: 0.5rem;">
+              <span class="has-text-weight-semibold ah-truncate">
+                {{ ui.sidebar.trackProgressLabel }} · {{ activeTrackLabel() }}
+              </span>
+              <span
+                class="is-family-monospace tabular-nums has-text-weight-semibold"
+                [class.ah-text-emerald]="progress.isTrackComplete()"
+                style="flex-shrink: 0;"
+              >
+                {{ progress.trackProgressPercent() }}%
+              </span>
+            </div>
+
+            <div
+              class="ah-progress-track mb-2"
+              role="progressbar"
+              [attr.aria-label]="ui.sidebar.progressBarAria"
+              [attr.aria-valuenow]="progress.trackProgressPercent()"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            >
+              <div
+                class="ah-progress-fill"
+                [class.is-complete]="progress.isTrackComplete()"
+                [style.width.%]="progress.trackProgressPercent()"
+              ></div>
+            </div>
+
+            <div class="is-flex is-justify-content-space-between is-align-items-center is-family-monospace tabular-nums ah-text-subtle" style="font-size: 0.7rem; gap: 0.5rem;">
+              @if (progress.isTrackComplete()) {
+                <span class="icon-text has-text-weight-medium ah-text-emerald" style="font-family: var(--ah-font-sans);">
+                  <span class="icon is-small"><mat-icon class="ah-icon-xs">check_circle</mat-icon></span>
+                  <span>{{ ui.sidebar.trackCompleteLabel }}</span>
+                </span>
+              } @else {
+                <span>
+                  {{ progress.trackCompletedCount() }}/{{ progress.trackTotalCount() }} {{ ui.sidebar.reviewedSuffix }}
+                </span>
+              }
+
+              @if (progress.selectedTrack() !== 'all') {
+                <span>
+                  {{ ui.sidebar.overallLabel }}: {{ progress.completedCount() }}/{{ progress.totalCount() }} ({{ progress.progressPercent() }}%)
+                </span>
+              }
+            </div>
+          </div>
+
+          <!-- Search Input -->
+          <div class="field mb-0">
+            <div class="control has-icons-left has-icons-right">
+              <input
+                type="text"
+                [formControl]="searchControl"
+                [placeholder]="ui.sidebar.searchPlaceholder"
+                [attr.aria-label]="ui.sidebar.searchAria"
+                class="input is-small"
+              />
+              <span class="icon is-small is-left">
+                <mat-icon class="ah-icon-sm">search</mat-icon>
+              </span>
+              @if (searchControl.value) {
+                <button
+                  type="button"
+                  (click)="clearSearch()"
+                  [attr.aria-label]="ui.sidebar.clearFilterAria"
+                  class="icon is-small is-right"
+                  style="pointer-events: auto; background: transparent; border: 0; cursor: pointer;"
+                >
+                  <mat-icon class="ah-icon-xs">close</mat-icon>
+                </button>
+              }
+            </div>
+          </div>
+
+          <!-- Interactive Track Filter Tabs -->
+          <div class="ah-segmented is-fullwidth">
+            @for (tab of trackTabs(); track tab.id) {
+              <button
+                type="button"
+                (click)="progress.setTrack(tab.id)"
+                class="ah-seg-btn"
+                [class.is-active]="progress.selectedTrack() === tab.id"
+              >
+                {{ tab.label }}
+              </button>
+            }
+          </div>
+        </div>
+
+        <!-- Topic List -->
+        <nav class="ah-sidebar-list" aria-label="Handbook Topics">
+          @for (topic of progress.filteredTopics(); track topic.id) {
+            @let isSelected = progress.activeView() === 'topic' && progress.selectedTopicId() === topic.id;
+            @let isDone = progress.isCompleted(topic.id);
+            <div class="ah-topic-row" [class.is-selected]="isSelected">
+              <button
+                type="button"
+                (click)="openTopic(topic.id)"
+                class="ah-topic-row-btn"
+              >
+                <div class="is-flex is-align-items-center" style="gap: 0.45rem;">
+                  <span
+                    class="is-family-monospace tabular-nums"
+                    style="font-size: 0.7rem; flex-shrink: 0;"
+                    [style.color]="isSelected ? '#fda4af' : '#94a3b8'"
+                  >
+                    {{ topic.order }}.
+                  </span>
+                  <span class="ah-truncate is-size-7 has-text-weight-medium is-family-monospace">
+                    {{ topic.directory }}
+                  </span>
+                </div>
+                <p
+                  class="ah-truncate is-size-7 m-0"
+                  style="margin-top: 0.15rem;"
+                  [style.color]="isSelected ? '#cbd5e1' : '#64748b'"
+                >
+                  {{ topic.title }}
+                </p>
+              </button>
+
+              <button
+                type="button"
+                (click)="toggleTopicFromSidebar($event, topic.id)"
+                [attr.aria-label]="ui.sidebar.markDoneAria + ': ' + topic.title"
+                [attr.aria-pressed]="isDone"
+                class="ah-topic-toggle-btn"
+              >
+                <mat-icon
+                  class="ah-icon-xs"
+                  [style.color]="isDone ? (isSelected ? '#34d399' : '#059669') : (isSelected ? '#64748b' : '#cbd5e1')"
+                >
+                  {{ isDone ? 'check_circle' : 'radio_button_unchecked' }}
+                </mat-icon>
+              </button>
+            </div>
+          } @empty {
+            <div class="has-text-centered py-6 px-3">
+              <p class="is-size-7 has-text-weight-medium ah-text-muted mb-2">{{ ui.sidebar.emptyTitle }}</p>
+              <button
+                type="button"
+                (click)="clearSearch(); progress.setTrack('all')"
+                class="button is-text is-small ah-text-rose"
+              >
+                {{ ui.sidebar.resetFilters }}
+              </button>
+            </div>
+          }
+        </nav>
+      </div>
+    </aside>
+
+    <!-- Main Content Stage -->
+    <main class="ah-main">
+      <!-- Workspace Toolbar: Quick Language Toggle on Mobile -->
+      <div class="ah-container-wide is-flex is-justify-content-space-between is-align-items-center pb-3 mb-5 ah-mobile-only" style="border-bottom: 1px solid #e2e8f0;">
+        <span class="is-size-7 ah-text-subtle">{{ ui.language.label }}</span>
+        <div class="ah-segmented">
+          <button
+            type="button"
+            (click)="setLanguage('en')"
+            class="ah-seg-btn"
+            [class.is-active]="i18n.lang() === 'en'"
+          >
+            {{ ui.language.en }}
+          </button>
+          <button
+            type="button"
+            (click)="setLanguage('vi')"
+            class="ah-seg-btn"
+            [class.is-active]="i18n.lang() === 'vi'"
+          >
+            {{ ui.language.vi }}
+          </button>
+        </div>
+      </div>
+
+      @switch (progress.activeView()) {
+        @case ('overview') {
+          <div class="ah-container-wide">
+            <!-- Hero Split -->
+            <section class="columns is-variable is-6 is-vcentered">
+              <div class="column is-6">
+                <p class="is-size-7 has-text-weight-medium ah-text-subtle mb-3">
+                  {{ ui.overview.kicker }}
+                </p>
+                <h1 class="title is-2 text-balance mb-4">
+                  {{ ui.overview.heroTitle }}
+                </h1>
+                <p class="is-size-6 ah-text-muted mb-5" style="line-height: 1.65;">
+                  {{ ov.overview }}
+                </p>
+                <div class="buttons">
+                  <button
+                    type="button"
+                    (click)="openTopic('fundamentals')"
+                    class="button is-dark has-text-weight-medium"
+                  >
+                    <span>{{ ui.overview.startModuleCta }}</span>
+                    <span class="icon is-small"><mat-icon class="ah-icon-sm">arrow_forward</mat-icon></span>
+                  </button>
+                  <button
+                    type="button"
+                    (click)="setView('approach')"
+                    class="button is-white has-text-weight-medium"
+                    style="border-color: #cbd5e1;"
+                  >
+                    <span class="icon is-small"><mat-icon class="ah-icon-sm">layers</mat-icon></span>
+                    <span>{{ ui.overview.approachCta }}</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="column is-6">
+                <div class="ah-hero-media">
+                  @if (!heroImageFailed()) {
+                    <img
+                      src="/src/assets/images/angular_handbook_architecture_1795426500232.jpg"
+                      [alt]="ui.overview.imageAlt"
+                      referrerpolicy="no-referrer"
+                      (error)="onHeroImageError()"
+                    />
+                  } @else {
+                    <div class="is-flex is-flex-direction-column is-align-items-center is-justify-content-center p-6 has-text-centered" style="min-height: 240px; background-color: #f1f5f9;">
+                      <mat-icon class="ah-text-rose" style="font-size: 40px; width: 40px; height: 40px;">architecture</mat-icon>
+                      <p class="is-size-6 has-text-weight-semibold mt-2 mb-1">{{ ui.overview.imageFallbackTitle }}</p>
+                      <p class="is-size-7 ah-text-subtle m-0">{{ ui.overview.imageFallbackSubtitle }}</p>
+                    </div>
+                  }
+                </div>
+              </div>
+            </section>
+
+            <!-- Repository Index Grid -->
+            <section class="ah-divider-top">
+              <div class="level is-mobile mb-5" style="flex-wrap: wrap; gap: 0.75rem;">
+                <div class="level-left">
+                  <div>
+                    <h2 class="title is-4 mb-1">{{ ui.overview.curriculumHeading }}</h2>
+                    <p class="is-size-7 ah-text-muted m-0">{{ ui.overview.curriculumSubheading }}</p>
+                  </div>
+                </div>
+                <div class="level-right">
+                  <span class="is-size-7 ah-text-subtle is-family-monospace tabular-nums">{{ ui.overview.curriculumStats }}</span>
+                </div>
+              </div>
+
+              <div class="columns is-multiline">
+                @for (topic of progress.topics(); track topic.id) {
+                  <div class="column is-4-desktop is-6-tablet">
+                    <button
+                      type="button"
+                      (click)="openTopic(topic.id)"
+                      class="ah-card-btn"
+                    >
+                      <div>
+                        <div class="is-flex is-justify-content-space-between is-align-items-center is-size-7 ah-text-subtle mb-2">
+                          <span class="is-family-monospace">{{ topic.order }}. {{ topic.directory }}</span>
+                          @if (topic.sandboxType !== 'none') {
+                            <span class="icon-text has-text-weight-medium ah-text-rose">
+                              <span class="icon is-small"><mat-icon class="ah-icon-xs">science</mat-icon></span>
+                              <span>{{ ui.overview.sandboxBadge }}</span>
+                            </span>
+                          }
+                        </div>
+                        <h3 class="is-size-6 has-text-weight-semibold mb-2">
+                          {{ topic.title }}
+                        </h3>
+                        <p class="is-size-7 ah-text-muted m-0" style="line-height: 1.55;">
+                          {{ topic.subtitle }}
+                        </p>
+                      </div>
+                      <div class="is-flex is-justify-content-space-between is-align-items-center is-size-7 ah-text-subtle mt-4 pt-3" style="border-top: 1px solid #f1f5f9;">
+                        <span>{{ topic.trackLabel }} · {{ progress.estimateReadingMinutes(topic) }} {{ ui.overview.minUnit }}</span>
+                        @if (progress.isCompleted(topic.id)) {
+                          <span class="icon-text has-text-weight-medium ah-text-emerald">
+                            <span class="icon is-small"><mat-icon class="ah-icon-xs">check_circle</mat-icon></span>
+                            <span>{{ ui.overview.reviewedLabel }}</span>
+                          </span>
+                        } @else {
+                          <span>{{ ui.overview.openLabel }}</span>
+                        }
+                      </div>
+                    </button>
+                  </div>
+                }
+              </div>
+            </section>
+
+            <!-- Related Projects & Official Resources -->
+            <section class="ah-divider-top">
+              <div class="columns is-variable is-6">
+                <div class="column is-7">
+                  <h2 class="title is-5 mb-2">{{ ui.overview.relatedHeading }}</h2>
+                  <p class="is-size-7 ah-text-muted mb-4">
+                    {{ ui.overview.relatedDescription }}
+                  </p>
+                  <div class="ah-box is-clipped">
+                    <table class="table is-fullwidth is-hoverable is-size-7 m-0">
+                      <thead style="background-color: #f8fafc;">
+                        <tr>
+                          <th>{{ ui.overview.tableHeaders.repository }}</th>
+                          <th>{{ ui.overview.tableHeaders.purpose }}</th>
+                          <th>{{ ui.overview.tableHeaders.focus }}</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        @for (row of ov.relatedProjects; track row.repository) {
+                          <tr>
+                            <td class="has-text-weight-semibold">{{ row.repository }}</td>
+                            <td class="ah-text-muted">{{ row.purpose }}</td>
+                            <td class="ah-text-muted">{{ row.focus }}</td>
+                          </tr>
+                        }
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="column is-5">
+                  <h2 class="title is-5 mb-4">{{ ui.overview.resourcesHeading }}</h2>
+                  <div class="ah-box is-clipped">
+                    @for (res of ov.learningResources; track res.url; let last = $last) {
+                      <a
+                        [href]="res.url"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="is-flex is-justify-content-space-between is-align-items-start p-4"
+                        [style.border-bottom]="last ? 'none' : '1px solid #e2e8f0'"
+                      >
+                        <div>
+                          <p class="is-size-7 has-text-weight-semibold mb-1" style="color: #0f172a;">{{ res.label }}</p>
+                          <p class="is-size-7 ah-text-muted m-0">{{ res.summary }}</p>
+                        </div>
+                        <mat-icon class="ah-icon-sm ah-text-subtle" style="flex-shrink: 0;">open_in_new</mat-icon>
+                      </a>
+                    }
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        }
+
+        @case ('topic') {
+          @let topic = progress.selectedTopic();
+          <div class="ah-container-reading">
+            <!-- Topic Header -->
+            <div class="pb-5 mb-6" style="border-bottom: 1px solid #e2e8f0;">
+              <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between is-align-items-center mb-4" style="gap: 0.75rem;">
+                <div class="is-flex is-flex-wrap-wrap is-align-items-center is-size-7 ah-text-subtle" style="gap: 0.5rem;">
+                  <span class="is-family-monospace has-text-weight-medium" style="color: #334155;">{{ topic.order }}. {{ topic.directory }}</span>
+                  <span aria-hidden="true">·</span>
+                  <span>{{ topic.trackLabel }}</span>
+                  <span
+                    class="tag is-small ah-reading-badge is-family-monospace tabular-nums"
+                    [attr.aria-label]="ui.topic.readingTimeLabel + ': ' + progress.estimateReadingMinutes(topic) + ' ' + ui.topic.minReadSuffix"
+                  >
+                    <mat-icon class="ah-icon-xs">schedule</mat-icon>
+                    <span>{{ ui.topic.readingTimeLabel }}: {{ progress.estimateReadingMinutes(topic) }} {{ ui.topic.minReadSuffix }}</span>
+                  </span>
+                </div>
+
+                <button
+                  type="button"
+                  (click)="progress.toggleCompleted(topic.id)"
+                  class="button is-small has-text-weight-medium"
+                  [class.is-success]="progress.isCompleted(topic.id)"
+                  [class.is-light]="progress.isCompleted(topic.id)"
+                  [class.is-white]="!progress.isCompleted(topic.id)"
+                  [style.border-color]="progress.isCompleted(topic.id) ? '#6ee7b7' : '#cbd5e1'"
+                >
+                  <span class="icon is-small">
+                    <mat-icon class="ah-icon-xs">
+                      {{ progress.isCompleted(topic.id) ? 'check_circle' : 'radio_button_unchecked' }}
+                    </mat-icon>
+                  </span>
+                  <span>{{ progress.isCompleted(topic.id) ? ui.topic.markedReviewed : ui.topic.markReviewed }}</span>
+                </button>
+              </div>
+
+              <h1 class="title is-3 text-balance mb-2">{{ topic.title }}</h1>
+              <p class="is-size-6 ah-text-muted m-0" style="line-height: 1.6;">{{ topic.subtitle }}</p>
+            </div>
+
+            <!-- Interactive Sandbox -->
+            @if (topic.sandboxType !== 'none') {
+              <div class="mb-6">
+                <app-topic-sandbox [sandboxType]="topic.sandboxType" />
+              </div>
+            }
+
+            <!-- 6-Step Learning Approach Sections -->
+            <div class="columns">
+              <div class="column is-6">
+                <section class="ah-box p-5" style="height: 100%;">
+                  <div class="is-size-7 is-family-monospace ah-text-rose mb-2">{{ ui.topic.step1Kicker }}</div>
+                  <h2 class="title is-5 mb-2">{{ ui.topic.step1Heading }}</h2>
+                  <p class="is-size-7 ah-text-muted m-0" style="line-height: 1.65;">{{ topic.concept }}</p>
+                </section>
+              </div>
+              <div class="column is-6">
+                <section class="ah-box p-5" style="height: 100%;">
+                  <div class="is-size-7 is-family-monospace ah-text-rose mb-2">{{ ui.topic.step2Kicker }}</div>
+                  <h2 class="title is-5 mb-2">{{ ui.topic.step2Heading }}</h2>
+                  <p class="is-size-7 ah-text-muted m-0" style="line-height: 1.65;">{{ topic.howItWorks }}</p>
+                </section>
+              </div>
+            </div>
+
+            <section class="ah-box p-5 mb-5">
+              <div class="is-size-7 is-family-monospace ah-text-rose mb-2">{{ ui.topic.step3Kicker }}</div>
+              <h2 class="title is-5 mb-2">{{ ui.topic.step3Heading }}</h2>
+              <p class="is-size-7 ah-text-muted m-0" style="line-height: 1.65;">{{ topic.usage }}</p>
+            </section>
+
+            <section class="ah-box is-clipped mb-5">
+              <div
+                class="is-flex is-flex-wrap-wrap is-justify-content-space-between is-align-items-center px-5 py-3"
+                style="background-color: #f8fafc; border-bottom: 1px solid #e2e8f0; gap: 0.75rem;"
+              >
+                <div class="is-size-7">
+                  <span class="is-family-monospace ah-text-rose">{{ ui.topic.step4Kicker }}</span>
+                  <span class="mx-2 ah-text-subtle" aria-hidden="true">·</span>
+                  <span class="has-text-weight-semibold">{{ topic.example.title }}</span>
+                  <span class="ml-2 is-family-monospace ah-text-subtle">{{ topic.example.filename }}</span>
+                </div>
+                <button
+                  type="button"
+                  (click)="copyExampleCode(topic.id, topic.example.code)"
+                  class="button is-small is-white"
+                  style="border-color: #cbd5e1;"
+                >
+                  <span class="icon is-small">
+                    <mat-icon class="ah-icon-xs">{{ copiedTopicId() === topic.id ? 'check' : 'content_copy' }}</mat-icon>
+                  </span>
+                  <span>{{ copiedTopicId() === topic.id ? ui.topic.copied : ui.topic.copyCode }}</span>
+                </button>
+              </div>
+              <pre class="ah-code-pre"><code>{{ topic.example.code }}</code></pre>
+              <div class="px-5 py-3 is-size-7 ah-text-muted" style="border-top: 1px solid #e2e8f0;">
+                {{ topic.example.explanation }}
+              </div>
+            </section>
+
+            <section class="ah-box p-5 mb-5">
+              <div class="is-size-7 is-family-monospace ah-text-rose mb-1">{{ ui.topic.step5Kicker }}</div>
+              <h2 class="title is-5 mb-4">{{ ui.topic.step5Heading }}</h2>
+              <div class="columns">
+                <div class="column is-6">
+                  <h3 class="icon-text is-size-7 has-text-weight-semibold ah-text-emerald mb-3">
+                    <span class="icon is-small"><mat-icon class="ah-icon-xs">check_circle</mat-icon></span>
+                    <span>{{ ui.topic.recommended }}</span>
+                  </h3>
+                  <ul class="is-size-7 ah-text-muted" style="list-style: none; margin: 0; padding: 0;">
+                    @for (rec of topic.bestPractices.recommended; track rec) {
+                      <li class="is-flex mb-2" style="gap: 0.5rem;">
+                        <span class="has-text-weight-bold ah-text-emerald" aria-hidden="true">+</span>
+                        <span>{{ rec }}</span>
+                      </li>
+                    }
+                  </ul>
+                </div>
+
+                <div class="column is-6">
+                  <h3 class="icon-text is-size-7 has-text-weight-semibold ah-text-rose mb-3">
+                    <span class="icon is-small"><mat-icon class="ah-icon-xs">warning_amber</mat-icon></span>
+                    <span>{{ ui.topic.avoidPitfalls }}</span>
+                  </h3>
+                  <ul class="is-size-7 ah-text-muted" style="list-style: none; margin: 0; padding: 0;">
+                    @for (pitfall of topic.bestPractices.pitfalls; track pitfall) {
+                      <li class="is-flex mb-2" style="gap: 0.5rem;">
+                        <span class="has-text-weight-bold ah-text-rose" aria-hidden="true">-</span>
+                        <span>{{ pitfall }}</span>
+                      </li>
+                    }
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="ah-box p-5 mb-6 is-flex is-flex-wrap-wrap is-justify-content-space-between is-align-items-center" style="gap: 1rem;">
+              <div style="flex: 1; min-width: 240px;">
+                <div class="is-size-7 is-family-monospace ah-text-rose mb-1">{{ ui.topic.step6Kicker }}</div>
+                <p class="is-size-7 ah-text-muted m-0" style="line-height: 1.6;">{{ topic.realWorldReference }}</p>
+              </div>
+              <a
+                [href]="topic.officialDocUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button is-small is-white"
+                style="border-color: #cbd5e1;"
+              >
+                <span>{{ ui.topic.docLinkLabel }}</span>
+                <span class="icon is-small"><mat-icon class="ah-icon-xs">open_in_new</mat-icon></span>
+              </a>
+            </section>
+
+            <!-- Previous / Next Navigation -->
+            <nav class="level pt-5" style="border-top: 1px solid #e2e8f0;" aria-label="Module Navigation">
+              <div class="level-left">
+                @if (progress.previousTopic(); as prev) {
+                  <button
+                    type="button"
+                    (click)="openTopic(prev.id)"
+                    class="button is-small is-white"
+                    style="border-color: #cbd5e1;"
+                  >
+                    <span class="icon is-small"><mat-icon class="ah-icon-xs">arrow_back</mat-icon></span>
+                    <span class="ah-truncate" style="max-width: 180px;">{{ prev.order }}. {{ prev.title }}</span>
+                  </button>
+                }
+              </div>
+              <div class="level-right">
+                @if (progress.nextTopic(); as next) {
+                  <button
+                    type="button"
+                    (click)="openTopic(next.id)"
+                    class="button is-small is-dark"
+                  >
+                    <span class="ah-truncate" style="max-width: 180px;">{{ next.order }}. {{ next.title }}</span>
+                    <span class="icon is-small"><mat-icon class="ah-icon-xs">arrow_forward</mat-icon></span>
+                  </button>
+                }
+              </div>
+            </nav>
+          </div>
+        }
+
+        @case ('approach') {
+          <div class="ah-container-reading">
+            <div class="pb-5 mb-6" style="border-bottom: 1px solid #e2e8f0;">
+              <p class="is-size-7 has-text-weight-medium ah-text-subtle mb-2">{{ ui.approachView.kicker }}</p>
+              <h1 class="title is-3 mb-2">{{ ui.approachView.title }}</h1>
+              <p class="is-size-6 ah-text-muted m-0">{{ ui.approachView.subtitle }}</p>
+            </div>
+
+            <div class="columns is-multiline mb-5">
+              @for (item of ov.learningApproach; track item.step) {
+                <div class="column is-6">
+                  <div class="ah-box p-5" style="height: 100%;">
+                    <div class="is-size-7 is-family-monospace has-text-weight-semibold ah-text-rose mb-2">
+                      {{ item.step }}. {{ item.title }}
+                    </div>
+                    <p class="is-size-7 ah-text-muted m-0" style="line-height: 1.65;">{{ item.description }}</p>
+                  </div>
+                </div>
+              }
+            </div>
+
+            <div class="ah-box p-5 is-flex is-flex-wrap-wrap is-justify-content-space-between is-align-items-center" style="gap: 1rem;">
+              <div>
+                <h2 class="title is-6 mb-1">{{ ui.approachView.ctaTitle }}</h2>
+                <p class="is-size-7 ah-text-muted m-0">{{ ui.approachView.ctaSubtitle }}</p>
+              </div>
+              <button
+                type="button"
+                (click)="progress.openInteractiveSandbox()"
+                class="button is-dark is-small"
+              >
+                <span class="icon is-small"><mat-icon class="ah-icon-xs">science</mat-icon></span>
+                <span>{{ ui.approachView.ctaButton }}</span>
+              </button>
+            </div>
+          </div>
+        }
+
+        @case ('principles') {
+          <div class="ah-container-reading">
+            <div class="pb-5 mb-6" style="border-bottom: 1px solid #e2e8f0;">
+              <p class="is-size-7 has-text-weight-medium ah-text-subtle mb-2">{{ ui.principlesView.kicker }}</p>
+              <h1 class="title is-3 mb-2">{{ ui.principlesView.title }}</h1>
+              <p class="is-size-6 ah-text-muted m-0">{{ ui.principlesView.subtitle }}</p>
+            </div>
+
+            <div class="columns">
+              <div class="column is-6">
+                <section class="ah-box p-5" style="height: 100%;">
+                  <h2 class="title is-5 mb-4">{{ ui.principlesView.objectivesHeading }}</h2>
+                  <ul class="is-size-7 ah-text-muted" style="list-style: none; margin: 0; padding: 0;">
+                    @for (obj of ov.objectives; track obj) {
+                      <li class="is-flex is-align-items-start mb-3" style="gap: 0.6rem;">
+                        <mat-icon class="ah-icon-sm ah-text-rose" style="flex-shrink: 0;">task_alt</mat-icon>
+                        <span>{{ obj }}</span>
+                      </li>
+                    }
+                  </ul>
+                </section>
+              </div>
+
+              <div class="column is-6">
+                <section class="ah-box p-5" style="height: 100%;">
+                  <h2 class="title is-5 mb-4">{{ ui.principlesView.principlesHeading }}</h2>
+                  <ul class="is-size-7 ah-text-muted" style="list-style: none; margin: 0; padding: 0;">
+                    @for (principle of ov.principles; track principle) {
+                      <li class="is-flex is-align-items-start mb-3" style="gap: 0.6rem;">
+                        <mat-icon class="ah-icon-sm" style="flex-shrink: 0; color: #334155;">verified</mat-icon>
+                        <span>{{ principle }}</span>
+                      </li>
+                    }
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </div>
+        }
+      }
+    </main>
+  </div>
+
+  <!-- Quiet Minimal Footer -->
+  <footer class="ah-footer">
+    <div class="ah-footer-inner">
+      <span>{{ ui.footer.tagline }}</span>
+      <div class="is-flex" style="gap: 1.25rem;">
+        <a href="https://angular.dev/overview" target="_blank" rel="noopener noreferrer" class="ah-text-subtle">{{ ui.footer.docs }}</a>
+        <a href="https://angular.dev/tutorials" target="_blank" rel="noopener noreferrer" class="ah-text-subtle">{{ ui.footer.tutorials }}</a>
+        <a href="https://angular.dev/api" target="_blank" rel="noopener noreferrer" class="ah-text-subtle">{{ ui.footer.apiReference }}</a>
+      </div>
+    </div>
+  </footer>
+</div>

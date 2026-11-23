@@ -1,0 +1,764 @@
+{
+  "meta": {
+    "lang": "en",
+    "label": "English",
+    "pageTitle": "Angular Handbook"
+  },
+  "ui": {
+    "brand": "Angular Handbook",
+    "nav": {
+      "overview": "Overview",
+      "curriculum": "Curriculum",
+      "approach": "Learning Approach",
+      "principles": "Principles",
+      "sandboxCta": "Signals Sandbox",
+      "toggleSidebarAria": "Toggle curriculum sidebar"
+    },
+    "language": {
+      "label": "Language",
+      "en": "English",
+      "vi": "Tiếng Việt"
+    },
+    "sidebar": {
+      "title": "Repository Structure",
+      "reviewedSuffix": "reviewed",
+      "trackProgressLabel": "Track Progress",
+      "overallLabel": "Overall",
+      "trackCompleteLabel": "Track Complete",
+      "progressBarAria": "Learning track completion progress",
+      "markDoneAria": "Toggle topic completion",
+      "searchPlaceholder": "Filter 15 modules...",
+      "searchAria": "Filter Angular handbook modules",
+      "clearFilterAria": "Clear filter",
+      "tracks": {
+        "all": "All",
+        "core": "Core",
+        "reactive": "Reactive",
+        "architecture": "Quality"
+      },
+      "emptyTitle": "No matching modules",
+      "resetFilters": "Reset filters",
+      "reviewedBadgeAria": "Reviewed"
+    },
+    "overview": {
+      "kicker": "Knowledge Repository · Based on angular.dev · 15 Curriculum Modules",
+      "heroTitle": "Structured Mastery of Modern Angular Architecture",
+      "startModuleCta": "Start Module 01",
+      "approachCta": "6-Step Approach",
+      "imageAlt": "Isometric technical diagram illustrating modular Angular components and reactive signal pathways",
+      "imageFallbackTitle": "Angular Handbook Architecture",
+      "imageFallbackSubtitle": "15 modular directories from fundamentals to practical examples",
+      "curriculumHeading": "Repository Curriculum",
+      "curriculumSubheading": "Select any directory below to study its concept, mechanics, code example, and best practices.",
+      "curriculumStats": "15 directories · 5 interactive sandboxes",
+      "sandboxBadge": "Sandbox",
+      "minUnit": "min",
+      "reviewedLabel": "Reviewed",
+      "openLabel": "Open",
+      "relatedHeading": "Related Projects",
+      "relatedDescription": "The handbook focuses on understanding the technology, while the companion project applies that knowledge to solve practical problems.",
+      "tableHeaders": {
+        "repository": "Repository",
+        "purpose": "Purpose",
+        "focus": "Focus"
+      },
+      "resourcesHeading": "Primary Learning Resources"
+    },
+    "topic": {
+      "studyUnit": "min study",
+      "readingTimeLabel": "Reading time",
+      "minReadSuffix": "min",
+      "markedReviewed": "Marked Reviewed",
+      "markReviewed": "Mark as Reviewed",
+      "step1Kicker": "01. Concept",
+      "step1Heading": "What it is & why it exists",
+      "step2Kicker": "02. How it works",
+      "step2Heading": "Underlying mechanism",
+      "step3Kicker": "03. Usage",
+      "step3Heading": "How and when to apply it",
+      "step4Kicker": "04. Example",
+      "copyCode": "Copy Code",
+      "copied": "Copied",
+      "step5Kicker": "05. Best practices",
+      "step5Heading": "Recommended patterns & common pitfalls",
+      "recommended": "Recommended",
+      "avoidPitfalls": "Avoid Pitfalls",
+      "step6Kicker": "06. Real-world reference",
+      "docLinkLabel": "angular.dev Guide"
+    },
+    "approachView": {
+      "kicker": "Methodology · Angular Handbook",
+      "title": "The 6-Step Learning Approach",
+      "subtitle": "Every topic directory in the Angular Handbook follows a consistent six-stage framework connecting theory to production practice.",
+      "ctaTitle": "Ready to apply this methodology?",
+      "ctaSubtitle": "Jump straight into Signals & Reactive State with its live interactive sandbox.",
+      "ctaButton": "Open Signals Module"
+    },
+    "principlesView": {
+      "kicker": "Core Standards · Angular Handbook",
+      "title": "Objectives & Guiding Principles",
+      "subtitle": "Standards that keep learning notes concise, aligned with official Angular releases, and grounded in practical trade-offs.",
+      "objectivesHeading": "Handbook Objectives",
+      "principlesHeading": "Engineering Principles"
+    },
+    "footer": {
+      "tagline": "Angular Handbook · Primary reference: angular.dev",
+      "docs": "Docs",
+      "tutorials": "Tutorials",
+      "apiReference": "API Reference"
+    }
+  },
+  "sandbox": {
+    "executedLive": "Executed live in Angular 22",
+    "titles": {
+      "signals": "Live Signals Reactivity Sandbox",
+      "templates": "Built-in Control Flow Sandbox",
+      "components": "Component Input & Output Flow Sandbox",
+      "di": "Injector Hierarchy Sandbox",
+      "forms": "Typed Reactive Form Validation Sandbox",
+      "none": "Interactive Concept Lab"
+    },
+    "signals": {
+      "writableCount": "Writable Signal: count()",
+      "decrease": "Decrease",
+      "increase": "Increase",
+      "reset": "Reset",
+      "writableMultiplier": "Writable Signal: multiplier()",
+      "computedGraph": "Derived computed() Graph",
+      "parityCheck": "Parity Check",
+      "evenValue": "Even Value",
+      "oddValue": "Odd Value"
+    },
+    "templates": {
+      "switchSelector": "@switch Branch Selector",
+      "all": "All",
+      "core": "Core",
+      "reactive": "Reactive",
+      "simulateEmpty": "Simulate @empty fallback",
+      "emptyActive": "Empty Active",
+      "showItems": "Show Items",
+      "renderedOutput": "Rendered @for Output (track item.id)",
+      "emptyRenderedTitle": "@empty block rendered",
+      "emptyRenderedDesc": "Zero items matched the current collection state.",
+      "sampleItems": [
+        { "id": "sig", "name": "Signal State", "category": "reactive" },
+        { "id": "ctl", "name": "@for / @if Blocks", "category": "core" },
+        { "id": "di", "name": "Hierarchical DI", "category": "core" },
+        { "id": "rx", "name": "RxJS Interop", "category": "reactive" }
+      ]
+    },
+    "components": {
+      "parentScope": "Parent Scope (sends input() down)",
+      "parentPropLabel": "Parent Prop: badgeTitle()",
+      "eventsReceived": "Events received from child output()",
+      "countLabel": "Count",
+      "lastLabel": "Last",
+      "noneYet": "None yet",
+      "childBoundary": "Child Component Boundary",
+      "receivedViaInput": "Received via input()",
+      "untitledModule": "Untitled Module",
+      "emitOutputCta": "Emit output() to Parent",
+      "defaultBadgeTitle": "Reactive Signals Module"
+    },
+    "di": {
+      "selectScope": "Select Provider Scope",
+      "rootScopeBtn": "providedIn: 'root'",
+      "componentScopeBtn": "Component providers: []",
+      "rootDescription": "Both sibling cards inject the exact same singleton instance from the EnvironmentInjector.",
+      "componentDescription": "Each component creates an isolated ElementInjector instance with independent state.",
+      "componentA": "Component A",
+      "componentB": "Component B",
+      "instanceLabel": "Instance",
+      "increment": "Increment"
+    },
+    "forms": {
+      "titleLabel": "Topic Note Title (min 4 characters)",
+      "titlePlaceholder": "e.g. Signal Inputs",
+      "titleError": "Required (minimum 4 characters).",
+      "emailLabel": "Maintainer Email",
+      "emailPlaceholder": "dev@angular.dev",
+      "emailError": "Enter a valid email address.",
+      "liveState": "Live FormGroup State",
+      "validationStatus": "Validation Status",
+      "validLabel": "VALID",
+      "invalidLabel": "INVALID",
+      "defaultTitle": "Angular Signals"
+    }
+  },
+  "overviewContent": {
+    "tagline": "A structured learning and knowledge repository for modern Angular, aligned with angular.dev.",
+    "overview": "Dedicated to exploring and documenting Angular concepts, APIs, best practices, and development patterns from fundamental building blocks to production architecture.",
+    "objectives": [
+      "Consolidate Angular knowledge in a structured and organized curriculum.",
+      "Understand Angular fundamentals, architecture, and core rendering mechanics.",
+      "Explore modern Angular APIs, signals, control flow, and development patterns.",
+      "Document recommended practices alongside common development pitfalls.",
+      "Provide focused, runnable examples and reusable technical references.",
+      "Connect theoretical understanding directly to real-world application design."
+    ],
+    "learningApproach": [
+      {
+        "step": "01",
+        "title": "Concept",
+        "description": "Understand what the feature or API is and why it exists in the Angular ecosystem."
+      },
+      {
+        "step": "02",
+        "title": "How it works",
+        "description": "Explore the underlying runtime, compiler, and change detection mechanisms."
+      },
+      {
+        "step": "03",
+        "title": "Usage",
+        "description": "Learn how and when to apply the pattern cleanly in component or service code."
+      },
+      {
+        "step": "04",
+        "title": "Examples",
+        "description": "Inspect and experiment with small, focused TypeScript and template examples."
+      },
+      {
+        "step": "05",
+        "title": "Best practices",
+        "description": "Distinguish idiomatic modern Angular approaches from outdated or brittle habits."
+      },
+      {
+        "step": "06",
+        "title": "Real-world reference",
+        "description": "Identify how each concept is applied inside a practical, multi-feature project."
+      }
+    ],
+    "principles": [
+      "Prefer official angular.dev documentation over outdated legacy tutorials.",
+      "Focus on understanding underlying concepts rather than memorizing APIs.",
+      "Use practical examples and interactive sandboxes to validate knowledge.",
+      "Keep engineering notes concise, structured, and easy to reference.",
+      "Document important architectural decisions, trade-offs, and lessons learned.",
+      "Keep learning materials aligned with standalone, signal-first modern Angular."
+    ],
+    "learningResources": [
+      {
+        "label": "Angular.dev",
+        "url": "https://angular.dev",
+        "summary": "Official home for modern Angular news, guides, and playground."
+      },
+      {
+        "label": "Angular Documentation",
+        "url": "https://angular.dev/overview",
+        "summary": "Core essentials covering components, signals, templates, and routing."
+      },
+      {
+        "label": "Angular Tutorials",
+        "url": "https://angular.dev/tutorials",
+        "summary": "Guided interactive lessons for building apps in the browser."
+      },
+      {
+        "label": "Angular API Reference",
+        "url": "https://angular.dev/api",
+        "summary": "Complete signature and deprecation index across all @angular packages."
+      }
+    ],
+    "relatedProjects": [
+      {
+        "repository": "Angular Handbook",
+        "purpose": "Learn, document, and reference Angular knowledge",
+        "focus": "Understanding the technology"
+      },
+      {
+        "repository": "Angular Real-world Project",
+        "purpose": "Apply Angular knowledge in a practical application",
+        "focus": "Solving actual engineering problems"
+      }
+    ]
+  },
+  "topics": [
+    {
+      "id": "fundamentals",
+      "order": "01",
+      "directory": "fundamentals/",
+      "title": "Core Angular Concepts",
+      "subtitle": "Standalone architecture, application bootstrapping, and template compilation.",
+      "track": "core",
+      "trackLabel": "Core Foundations",
+      "readingMinutes": 6,
+      "sandboxType": "none",
+      "concept": "Angular is a TypeScript-based web application framework built around standalone components, compile-time template verification, and fine-grained reactivity. Modern Angular eliminates mandatory NgModules in favor of self-contained components and functional providers.",
+      "howItWorks": "During compilation, the Angular compiler transforms HTML templates into incremental DOM instructions. At runtime, bootstrapApplication mounts the root component, initializes configured providers such as routing or HTTP, and binds reactive expressions directly to DOM nodes.",
+      "usage": "Bootstrap new applications in main.ts using bootstrapApplication(App, appConfig) and declare every component as a standalone unit with explicit imports and OnPush change detection.",
+      "example": {
+        "title": "Standalone Application Bootstrap",
+        "filename": "src/main.ts",
+        "code": "import { bootstrapApplication } from '@angular/platform-browser';\nimport { provideZonelessChangeDetection } from '@angular/core';\nimport { App } from './app/app';\n\nbootstrapApplication(App, {\n  providers: [\n    provideZonelessChangeDetection(),\n  ],\n});",
+        "explanation": "Bootstrapping directly with a standalone root component removes NgModule boilerplate while enabling tree-shakable functional providers."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Use standalone components by default with explicit imports arrays.",
+          "Enable strict TypeScript and strictTemplates compiler options.",
+          "Adopt zoneless change detection alongside signals for predictable updates."
+        ],
+        "pitfalls": [
+          "Creating shared KitchenSink NgModules that block granular tree-shaking.",
+          "Bypassing strict template type-checking with unsafe $any() casts."
+        ]
+      },
+      "realWorldReference": "In a real-world application, main.ts and app.config.ts serve as the single composition root wiring router features, HTTP interceptors, and error handlers.",
+      "officialDocUrl": "https://angular.dev/overview"
+    },
+    {
+      "id": "components",
+      "order": "02",
+      "directory": "components/",
+      "title": "Components & Communication",
+      "subtitle": "Signal-based input(), output(), model(), host bindings, and lifecycle hooks.",
+      "track": "core",
+      "trackLabel": "Core Foundations",
+      "readingMinutes": 8,
+      "sandboxType": "components",
+      "concept": "Components encapsulate a view template, styling, and local TypeScript state. Modern Angular replaces decorator-based @Input() and @Output() boilerplate with function-based signal inputs (input()), typed event emitters (output()), and explicit host metadata.",
+      "howItWorks": "Signal inputs expose reactive InputSignal<T> values that integrate directly with computed() and template tracking without needing ngOnChanges. Outputs emit strongly typed payloads upward to parent templates via EventEmitter-compatible OutputEmitterRef instances.",
+      "usage": "Use input.required<T>() for mandatory props, input(defaultValue) for optional props, output<T>() for user-triggered events, and the decorator host object for host element classes and listeners.",
+      "example": {
+        "title": "Signal Input & Output Component",
+        "filename": "src/app/topic-card.ts",
+        "code": "@Component({\n  selector: 'app-topic-card',\n  changeDetection: ChangeDetectionStrategy.OnPush,\n  host: { '[class.is-active]': 'active()' },\n  template: `\n    <h3>{{ title() }}</h3>\n    <button type=\"button\" (click)=\"selected.emit(id())\">Open</button>\n  `,\n})\nexport class TopicCard {\n  readonly id = input.required<string>();\n  readonly title = input.required<string>();\n  readonly active = input(false);\n  readonly selected = output<string>();\n}",
+        "explanation": "Function-based inputs and outputs keep data flow unidirectional while giving derived computations automatic reactive dependencies."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Keep ChangeDetectionStrategy.OnPush on every component.",
+          "Use the host metadata property instead of @HostBinding and @HostListener.",
+          "Keep components focused on a single UI responsibility."
+        ],
+        "pitfalls": [
+          "Mutating input objects in place instead of emitting an update event.",
+          "Placing heavy business or HTTP logic directly inside presentation components."
+        ]
+      },
+      "realWorldReference": "Design system primitives and feature cards in a production codebase receive immutable DTOs via input() and notify container views via output().",
+      "officialDocUrl": "https://angular.dev/guide/components"
+    },
+    {
+      "id": "templates",
+      "order": "03",
+      "directory": "templates/",
+      "title": "Template Syntax & Control Flow",
+      "subtitle": "Built-in @if, @for, @switch, @defer blocks, and declarative bindings.",
+      "track": "core",
+      "trackLabel": "Core Foundations",
+      "readingMinutes": 7,
+      "sandboxType": "templates",
+      "concept": "Angular templates extend HTML with built-in control flow blocks (@if, @for, @switch) and deferrable views (@defer). Built-in control flow requires no directive imports and delivers superior type narrowing and diffing performance.",
+      "howItWorks": "The template compiler parses @if and @switch blocks into compact conditional instructions with TypeScript narrowing inside each branch. @for mandates a track expression so Angular reconciles DOM nodes by identity rather than recreating lists.",
+      "usage": "Use @if / @else for conditional rendering, @for (item of items(); track item.id) with @empty for collections, and @defer (on viewport) to lazy-load heavy below-the-fold widgets.",
+      "example": {
+        "title": "Modern Built-in Control Flow",
+        "filename": "src/app/module-list.html",
+        "code": "@if (modules().length > 0) {\n  @for (mod of modules(); track mod.id) {\n    <article>{{ mod.title }}</article>\n  } @empty {\n    <p>No matching modules.</p>\n  }\n} @else {\n  <p>Loading curriculum...</p>\n}",
+        "explanation": "Native control flow eliminates *ngIf and *ngFor microsyntax while enforcing explicit track keys for optimal DOM reuse."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Always track @for loops by a stable unique identifier (track item.id).",
+          "Use class bindings ([class.active]=\"isActive()\") instead of ngClass.",
+          "Keep template expressions simple; move complex formatting into computed() or pipes."
+        ],
+        "pitfalls": [
+          "Using track $index on mutable lists that reorder, insert, or delete items.",
+          "Calling non-pure methods or writing arrow functions directly inside templates."
+        ]
+      },
+      "realWorldReference": "Searchable tables, navigation drawers, and multi-state dashboards rely on @switch and @for with @empty blocks to render loading, empty, and active states cleanly.",
+      "officialDocUrl": "https://angular.dev/guide/templates/control-flow"
+    },
+    {
+      "id": "directives",
+      "order": "04",
+      "directory": "directives/",
+      "title": "Built-in & Custom Directives",
+      "subtitle": "Attribute behavior attachment and hostDirectives composition.",
+      "track": "core",
+      "trackLabel": "Core Foundations",
+      "readingMinutes": 6,
+      "sandboxType": "none",
+      "concept": "Directives attach reusable DOM behavior or validation rules to existing elements and components without introducing extra wrapper nodes. Angular also supports hostDirectives for composing directive behaviors directly onto component hosts.",
+      "howItWorks": "When an attribute selector matches an element in a template, Angular instantiates the directive alongside the element injector, giving it access to ElementRef, host bindings, and injected services.",
+      "usage": "Author custom directives when multiple components share DOM behavior such as auto-focus, copy-to-clipboard feedback, click-outside detection, or keyboard shortcuts.",
+      "example": {
+        "title": "Copy Trigger Directive",
+        "filename": "src/app/directives/copy-trigger.ts",
+        "code": "@Directive({\n  selector: 'button[appCopyTrigger]',\n  host: {\n    '(click)': 'copyText()',\n    '[attr.data-copied]': 'copied()',\n  },\n})\nexport class CopyTrigger {\n  readonly text = input.required<string>({ alias: 'appCopyTrigger' });\n  readonly copied = signal(false);\n\n  async copyText() {\n    await navigator.clipboard.writeText(this.text());\n    this.copied.set(true);\n    setTimeout(() => this.copied.set(false), 1500);\n  }\n}",
+        "explanation": "A lightweight attribute directive encapsulates clipboard API logic and reactive copied feedback without creating wrapper markup."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Compose cross-cutting component behaviors via hostDirectives.",
+          "Use Renderer2 or host bindings rather than direct document.querySelector calls."
+        ],
+        "pitfalls": [
+          "Building a custom structural directive when a built-in @if or @for block suffices.",
+          "Leaving uncleaned window event listeners inside directives."
+        ]
+      },
+      "realWorldReference": "Enterprise UI kits compose tooltip, focus-trap, and permission-visibility behaviors across buttons and panels using hostDirectives.",
+      "officialDocUrl": "https://angular.dev/guide/directives"
+    },
+    {
+      "id": "dependency-injection",
+      "order": "05",
+      "directory": "dependency-injection/",
+      "title": "Dependency Injection & Providers",
+      "subtitle": "The inject() function, InjectionToken, and hierarchical injector resolution.",
+      "track": "core",
+      "trackLabel": "Core Foundations",
+      "readingMinutes": 8,
+      "sandboxType": "di",
+      "concept": "Angular Dependency Injection (DI) supplies classes, configuration objects, and services to components and functions without hardcoding instantiation. Services are decoupled from consumers and easily replaced in tests.",
+      "howItWorks": "Angular maintains two parallel injector trees: an EnvironmentInjector hierarchy (for root and route-scoped providers) and an ElementInjector tree (mirroring the DOM component tree). Calling inject(Token) walks up the element tree first, then the environment tree.",
+      "usage": "Define singleton services with @Injectable({ providedIn: 'root' }), inject dependencies via inject(Service) class fields, and type non-class configuration values using InjectionToken<T>.",
+      "example": {
+        "title": "Typed InjectionToken & inject()",
+        "filename": "src/app/core/api-config.ts",
+        "code": "export interface ApiConfig {\n  baseUrl: string;\n  timeoutMs: number;\n}\n\nexport const API_CONFIG = new InjectionToken<ApiConfig>('API_CONFIG', {\n  providedIn: 'root',\n  factory: () => ({ baseUrl: '/api', timeoutMs: 8000 }),\n});\n\n@Injectable({ providedIn: 'root' })\nexport class CatalogClient {\n  private readonly config = inject(API_CONFIG);\n  private readonly http = inject(HttpClient);\n}",
+        "explanation": "Using inject() preserves strict TypeScript inference, works inside standalone factory functions and route guards, and pairs cleanly with tree-shakable InjectionTokens."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Prefer inject() over constructor parameter injection for cleaner inheritance and function reuse.",
+          "Default to providedIn: 'root' so unused services are tree-shaken from bundles.",
+          "Scope stateful feature services at the component or route level when isolation is needed."
+        ],
+        "pitfalls": [
+          "Registering a stateful service in both root and a feature component accidentally, creating split instances.",
+          "Calling inject() outside an injection context (such as inside async callbacks)."
+        ]
+      },
+      "realWorldReference": "Multi-tab editors provide a fresh DraftState service in each editor component providers array while sharing a single AuthSession at root.",
+      "officialDocUrl": "https://angular.dev/guide/di"
+    },
+    {
+      "id": "routing",
+      "order": "06",
+      "directory": "routing/",
+      "title": "Angular Router",
+      "subtitle": "Lazy feature routes, functional guards, and component input binding.",
+      "track": "core",
+      "trackLabel": "Core Foundations",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "Angular Router maps browser URLs to component views, manages navigation history, lazy-loads feature bundles on demand, and guards route transitions.",
+      "howItWorks": "When navigation begins, the router matches URL segments against the Routes tree, runs functional canActivate guards and resolve handlers, dynamically imports loadComponent or loadChildren chunks, and renders the matched view inside <router-outlet>.",
+      "usage": "Configure provideRouter(routes, withComponentInputBinding()) in app.config.ts so route params and query params bind automatically to component input() signals.",
+      "example": {
+        "title": "Lazy Route with Functional Guard",
+        "filename": "src/app/app.routes.ts",
+        "code": "export const routes: Routes = [\n  {\n    path: 'topics/:topicId',\n    canActivate: [() => inject(SessionGuard).isReady()],\n    loadComponent: () =>\n      import('./topics/topic-detail').then((m) => m.TopicDetail),\n  },\n];",
+        "explanation": "Dynamic import() splits feature code into separate chunks loaded only when the user navigates to that route."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Lazy-load feature routes via loadComponent or loadChildren.",
+          "Write functional CanActivateFn guards using inject().",
+          "Enable withComponentInputBinding() to read :id route parameters as signal inputs."
+        ],
+        "pitfalls": [
+          "Eagerly importing heavy admin or analytics routes in the initial bundle.",
+          "Forgetting a wildcard fallback route (**) for unknown paths."
+        ]
+      },
+      "realWorldReference": "Applications with dozens of views isolate bundle weight per domain route and protect authenticated workspaces with functional router guards.",
+      "officialDocUrl": "https://angular.dev/guide/routing"
+    },
+    {
+      "id": "forms",
+      "order": "07",
+      "directory": "forms/",
+      "title": "Typed Reactive Forms",
+      "subtitle": "FormGroup, FormControl, built-in/custom validators, and state tracking.",
+      "track": "core",
+      "trackLabel": "Core Foundations",
+      "readingMinutes": 8,
+      "sandboxType": "forms",
+      "concept": "Reactive Forms model form inputs as explicit, strongly typed immutable data structures in TypeScript. Every control exposes synchronous validation status, value change observables, and dirty/touched state.",
+      "howItWorks": "FormControl and FormGroup instances form a tree synchronized with DOM inputs through ControlValueAccessor directives (formControlName, formGroup). Validators execute synchronously or asynchronously on every value update.",
+      "usage": "Construct typed forms using NonNullableFormBuilder or new FormGroup({ ... }), attach Validators, and bind them in templates via [formGroup] and formControlName.",
+      "example": {
+        "title": "Typed Reactive Form with Validation",
+        "filename": "src/app/note-editor.ts",
+        "code": "readonly noteForm = new FormGroup({\n  title: new FormControl('', {\n    nonNullable: true,\n    validators: [Validators.required, Validators.minLength(4)],\n  }),\n  email: new FormControl('', {\n    nonNullable: true,\n    validators: [Validators.required, Validators.email],\n  }),\n});",
+        "explanation": "nonNullable: true guarantees form.getRawValue() returns strict string types rather than string | null after reset()."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Use Reactive Forms consistently for predictable typing and unit testability.",
+          "Set nonNullable: true on controls that reset to an empty string or default value.",
+          "Surface validation messages using both clear text and icon indicators when touched."
+        ],
+        "pitfalls": [
+          "Mixing Template-driven ngModel bindings with Reactive Forms in the same form.",
+          "Showing validation errors aggressively before the user interacts with a field."
+        ]
+      },
+      "realWorldReference": "Multi-step checkout, settings panels, and dynamic filter forms rely on typed FormArrays and cross-field Group Validators.",
+      "officialDocUrl": "https://angular.dev/guide/forms/reactive-forms"
+    },
+    {
+      "id": "http",
+      "order": "08",
+      "directory": "http/",
+      "title": "HttpClient & Interceptors",
+      "subtitle": "provideHttpClient(), functional interceptors, typed responses, and cancellation.",
+      "track": "reactive",
+      "trackLabel": "Reactive & Data",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "HttpClient is Angular's built-in, testable HTTP communication layer supporting typed JSON responses, request cancellation via Observable unsubscription, progress events, and composable middleware interceptors.",
+      "howItWorks": "Each HttpClient call returns a cold Observable wrapping the Fetch or XHR backend. Requests flow sequentially through registered HttpInterceptorFn functions before reaching the network and return back through the interceptor chain.",
+      "usage": "Register provideHttpClient(withFetch(), withInterceptors([authInterceptor])) in app.config.ts and encapsulate endpoint calls inside dedicated repository or data services.",
+      "example": {
+        "title": "Functional Auth Interceptor",
+        "filename": "src/app/core/auth.interceptor.ts",
+        "code": "export const authInterceptor: HttpInterceptorFn = (req, next) => {\n  const token = inject(AuthStore).token();\n  if (!token) return next(req);\n\n  const authorizedReq = req.clone({\n    setHeaders: { Authorization: `Bearer ${token}` },\n  });\n  return next(authorizedReq);\n};",
+        "explanation": "Functional interceptors inject signals or services directly and clone immutable HttpRequest objects before forwarding."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Enable withFetch() for modern SSR-compatible HTTP transport.",
+          "Type every request explicitly: this.http.get<TopicDto[]>(url).",
+          "Handle HTTP errors centrally or convert responses to explicit loading/error state signals."
+        ],
+        "pitfalls": [
+          "Mutating HttpRequest headers directly instead of calling req.clone().",
+          "Calling HttpClient directly inside presentational UI components."
+        ]
+      },
+      "realWorldReference": "Production data layers pair typed HttpClient repositories with retry/backoff interceptors and centralized error mapping.",
+      "officialDocUrl": "https://angular.dev/guide/http"
+    },
+    {
+      "id": "signals",
+      "order": "09",
+      "directory": "signals/",
+      "title": "Signals & Reactive State",
+      "subtitle": "signal(), computed(), effect(), linkedSignal(), and fine-grained reactivity.",
+      "track": "reactive",
+      "trackLabel": "Reactive & Data",
+      "readingMinutes": 9,
+      "sandboxType": "signals",
+      "concept": "Signals are reactive wrappers around values that notify interested consumers whenever the value changes. They allow Angular to know precisely which templates or derived calculations depend on which piece of state.",
+      "howItWorks": "Reading a signal inside a computed() or template registers a dependency edge in a directed acyclic graph. When .set() or .update() runs, dependent computeds are marked dirty lazily and templates schedule minimal updates without Zone.js.",
+      "usage": "Store mutable state in signal(), express all derived state with computed(), derive resettable local state with linkedSignal(), and reserve effect() strictly for external side effects like localStorage sync or logging.",
+      "example": {
+        "title": "Reactive Counter & Derived State",
+        "filename": "src/app/signals-demo.ts",
+        "code": "readonly count = signal(2);\nreadonly multiplier = signal(3);\nreadonly product = computed(() => this.count() * this.multiplier());\nreadonly isEven = computed(() => this.product() % 2 === 0);\n\nincrement() {\n  this.count.update((n) => n + 1);\n}",
+        "explanation": "product and isEven recompute automatically and memoize their outputs only when count or multiplier actually changes."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Use update() or set() with immutable values; never mutate objects inside a signal.",
+          "Prefer computed() over effect() whenever deriving one state value from another.",
+          "Use untracked() inside effects when reading values that should not re-trigger the effect."
+        ],
+        "pitfalls": [
+          "Writing to another signal inside an effect() to synchronize state instead of using computed() or linkedSignal().",
+          "Treating signals as event streams when an Observable or callback is clearer."
+        ]
+      },
+      "realWorldReference": "Interactive calculators, filter toolbars, and shopping carts model primary state as writable signals and totals/filtered slices as memoized computed signals.",
+      "officialDocUrl": "https://angular.dev/guide/signals"
+    },
+    {
+      "id": "rxjs",
+      "order": "10",
+      "directory": "rxjs/",
+      "title": "Observables & RxJS Interop",
+      "subtitle": "Async event pipelines, flattening operators, toSignal(), and takeUntilDestroyed().",
+      "track": "reactive",
+      "trackLabel": "Reactive & Data",
+      "readingMinutes": 8,
+      "sandboxType": "none",
+      "concept": "RxJS excels at coordinating asynchronous event streams over time—debouncing search input, cancelling in-flight HTTP requests with switchMap, or combining WebSocket streams—while Signals excel at synchronous state.",
+      "howItWorks": "Observables push values through pure operator pipelines upon subscription. Angular interop utilities (toSignal, toObservable, takeUntilDestroyed) bridge RxJS streams into signal-based components with automatic teardown.",
+      "usage": "Use switchMap for cancelling stale search/navigation requests, takeUntilDestroyed() to prevent subscription leaks, and toSignal() to consume async streams declaratively in templates.",
+      "example": {
+        "title": "Debounced Search with toSignal()",
+        "filename": "src/app/search-panel.ts",
+        "code": "private readonly searchService = inject(SearchService);\nreadonly queryControl = new FormControl('', { nonNullable: true });\n\nreadonly results = toSignal(\n  this.queryControl.valueChanges.pipe(\n    debounceTime(200),\n    distinctUntilChanged(),\n    switchMap((q) => this.searchService.find(q)),\n  ),\n  { initialValue: [] },\n);",
+        "explanation": "toSignal() subscribes automatically in the injection context, cleans up on destroy, and exposes an ordinary Signal to the template."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Use switchMap for read/search requests where newer inputs supersede older ones.",
+          "Always manage subscriptions with toSignal(), async pipe, or takeUntilDestroyed()."
+        ],
+        "pitfalls": [
+          "Nesting subscribe() calls inside another subscribe() instead of flattening with switchMap or exhaustMap.",
+          "Forgetting exhaustMap on form submit actions, allowing duplicate submissions."
+        ]
+      },
+      "realWorldReference": "Typeahead search bars, polling monitors, and optimistic auto-save pipelines rely on RxJS timing operators bridged to UI signals.",
+      "officialDocUrl": "https://angular.dev/ecosystem/rxjs-interop"
+    },
+    {
+      "id": "state-management",
+      "order": "11",
+      "directory": "state-management/",
+      "title": "State Management Patterns",
+      "subtitle": "Signal stores, unidirectional data flow, and immutable state updates.",
+      "track": "reactive",
+      "trackLabel": "Reactive & Data",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "State management coordinates shared application state predictably across multiple components and routes. Modern Angular favors lightweight signal-based store services with private writable state and public readonly selectors.",
+      "howItWorks": "A store service holds private signal() containers, exposes .asReadonly() and computed() selectors, and centralizes all state transitions in explicit action methods.",
+      "usage": "Start with local component signals for UI-only state, elevate to a route-scoped signal store for feature workflows, and reserve root stores for cross-app session or preference state.",
+      "example": {
+        "title": "Encapsulated Signal Store Service",
+        "filename": "src/app/state/bookmarks.store.ts",
+        "code": "@Injectable({ providedIn: 'root' })\nexport class BookmarksStore {\n  private readonly _ids = signal<string[]>([]);\n  readonly ids = this._ids.asReadonly();\n  readonly count = computed(() => this._ids().length);\n\n  toggle(id: string) {\n    this._ids.update((list) =>\n      list.includes(id) ? list.filter((x) => x !== id) : [...list, id],\n    );\n  }\n}",
+        "explanation": "Exposing asReadonly() prevents external components from calling .set() arbitrarily, enforcing single-source mutations."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Separate server cache state, URL route state, and ephemeral UI state.",
+          "Expose readonly signals and computed views rather than raw writable signals."
+        ],
+        "pitfalls": [
+          "Duplicating URL parameters inside a global store where they fall out of sync.",
+          "Over-engineering a global Redux store for simple component-local state."
+        ]
+      },
+      "realWorldReference": "Workspace applications keep active filters in query parameters, domain entities in feature stores, and progress preferences persisted cleanly.",
+      "officialDocUrl": "https://angular.dev/guide/signals"
+    },
+    {
+      "id": "performance",
+      "order": "12",
+      "directory": "performance/",
+      "title": "Optimization & Performance",
+      "subtitle": "Zoneless change detection, OnPush, @defer blocks, and NgOptimizedImage.",
+      "track": "architecture",
+      "trackLabel": "Architecture & Quality",
+      "readingMinutes": 8,
+      "sandboxType": "none",
+      "concept": "Angular performance engineering focuses on reducing initial JavaScript bundle size, minimizing DOM reconciliation work, and eliminating unnecessary change detection passes.",
+      "howItWorks": "Zoneless execution paired with OnPush components ensures Angular only re-renders views whose signal dependencies or inputs actually change. @defer blocks split heavy widgets into separate lazy chunks loaded on interaction or viewport entry.",
+      "usage": "Use provideZonelessChangeDetection(), keep ChangeDetectionStrategy.OnPush on all components, wrap heavy charts/editors in @defer (on viewport), and optimize static images with NgOptimizedImage.",
+      "example": {
+        "title": "Deferred Heavy Visualization Block",
+        "filename": "src/app/analytics-page.html",
+        "code": "@defer (on viewport) {\n  <app-metrics-chart [series]=\"chartData()\" />\n} @placeholder (minimum 200ms) {\n  <div class=\"h-64 bg-slate-100 rounded-xl\">Chart loads on scroll</div>\n} @loading {\n  <p>Preparing visualization...</p>\n}",
+        "explanation": "@defer prevents heavy third-party charting dependencies from blocking initial page hydration and First Contentful Paint."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Audit bundle budgets in angular.json and lazy-load feature routes.",
+          "Use @defer with @placeholder to avoid Cumulative Layout Shift.",
+          "Provide explicit width and height on images to stabilize layout."
+        ],
+        "pitfalls": [
+          "Importing an entire utility or icon library barrel file when only two helpers are needed.",
+          "Running expensive array sorting or filtering directly inside template getters without computed()."
+        ]
+      },
+      "realWorldReference": "Content-rich portals use @defer (on interaction) for code playgrounds and comment drawers so the primary reading experience stays sub-second.",
+      "officialDocUrl": "https://angular.dev/best-practices/runtime-performance"
+    },
+    {
+      "id": "testing",
+      "order": "13",
+      "directory": "testing/",
+      "title": "Unit & Integration Testing",
+      "subtitle": "TestBed, signal state assertions, component harnesses, and HttpTestingController.",
+      "track": "architecture",
+      "trackLabel": "Architecture & Quality",
+      "readingMinutes": 7,
+      "sandboxType": "none",
+      "concept": "Reliable Angular tests verify public component contracts—rendered DOM output, emitted events, form validation, and service state—rather than fragile internal implementation details.",
+      "howItWorks": "TestBed configures an isolated testing module/component host, applies TestBed.flushEffects() or fixture.whenStable() for signal updates, and intercepts network calls cleanly with provideHttpClientTesting().",
+      "usage": "Test pure functions and signal stores directly without TestBed overhead, and use TestBed with ComponentFixture or Angular Material Harnesses for DOM interaction tests.",
+      "example": {
+        "title": "Testing a Signal Component",
+        "filename": "src/app/topic-card.spec.ts",
+        "code": "const fixture = TestBed.createComponent(TopicCard);\nfixture.componentRef.setInput('id', 'signals');\nfixture.componentRef.setInput('title', 'Signals & State');\nawait fixture.whenStable();\n\nexpect(fixture.nativeElement.textContent).toContain('Signals & State');",
+        "explanation": "componentRef.setInput() exercises real signal input binding and OnPush updates cleanly in zoneless test environments."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Query DOM elements by accessible roles, labels, and visible text.",
+          "Use provideHttpClientTesting() and HttpTestingController to verify request payloads."
+        ],
+        "pitfalls": [
+          "Asserting private component fields instead of rendered behavior and outputs.",
+          "Making live network requests inside unit tests."
+        ]
+      },
+      "realWorldReference": "CI pipelines pair fast unit tests on signal stores and validators with integration specs on critical user journeys.",
+      "officialDocUrl": "https://angular.dev/guide/testing"
+    },
+    {
+      "id": "architecture",
+      "order": "14",
+      "directory": "architecture/",
+      "title": "Architecture & Design Patterns",
+      "subtitle": "Domain boundaries, smart vs presentational split, and scalable folder layout.",
+      "track": "architecture",
+      "trackLabel": "Architecture & Quality",
+      "readingMinutes": 8,
+      "sandboxType": "none",
+      "concept": "Maintainable Angular codebases organize code around business domains rather than technical file types, keeping core singletons, reusable UI primitives, and lazy feature slices cleanly decoupled.",
+      "howItWorks": "Strict dependency rules prevent cross-feature coupling: core/ provides app-wide infrastructure, shared/ provides pure UI components and pipes, and features/ communicate through router URLs or well-defined facade contracts.",
+      "usage": "Separate smart container components (injecting stores/router) from pure presentational components (communicating solely through input() and output()).",
+      "example": {
+        "title": "Recommended Domain Directory Layout",
+        "filename": "src/app/ARCHITECTURE.txt",
+        "code": "src/app/\n├── core/            # Auth, HTTP interceptors, app-wide config\n├── shared/          # Pure UI primitives, pipes, directives\n└── features/\n    ├── curriculum/  # Domain routes, store, smart & UI components\n    └── sandbox/     # Isolated interactive playground feature",
+        "explanation": "Grouping by feature keeps related routes, state stores, and tests cohesive while making lazy loading effortless."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Keep presentation components free of backend/store imports.",
+          "Enforce unidirectional imports: features -> shared/core, never core -> features."
+        ],
+        "pitfalls": [
+          "Dumping every component across the app into a single monolithic shared/ folder.",
+          "Circular dependencies between feature services."
+        ]
+      },
+      "realWorldReference": "Large engineering teams assign domain ownership per feature folder so independent teams ship without merge bottlenecks.",
+      "officialDocUrl": "https://angular.dev/style-guide"
+    },
+    {
+      "id": "examples",
+      "order": "15",
+      "directory": "examples/",
+      "title": "Practical Examples & Experiments",
+      "subtitle": "Combining signals, reactive forms, DI, and control flow in cohesive patterns.",
+      "track": "architecture",
+      "trackLabel": "Architecture & Quality",
+      "readingMinutes": 6,
+      "sandboxType": "signals",
+      "concept": "The examples directory bridges conceptual study and real-world engineering by composing multiple Angular primitives—typed forms, signals, computed views, and clean templates—into small focused experiments.",
+      "howItWorks": "Each experiment validates one concrete interaction loop: capturing input cleanly, transforming state immutably with signals, and rendering deterministic template feedback.",
+      "usage": "Use small isolated experiments to verify unfamiliar Angular APIs or performance trade-offs before introducing them into a production codebase.",
+      "example": {
+        "title": "Filterable List Experiment",
+        "filename": "src/app/examples/filter-experiment.ts",
+        "code": "readonly searchControl = new FormControl('', { nonNullable: true });\nreadonly query = toSignal(this.searchControl.valueChanges, { initialValue: '' });\n\nreadonly filteredItems = computed(() => {\n  const q = this.query().trim().toLowerCase();\n  return this.items().filter((item) => item.toLowerCase().includes(q));\n});",
+        "explanation": "Combining Reactive Form controls with toSignal() and computed() creates zero-boilerplate, instant client-side filtering."
+      },
+      "bestPractices": {
+        "recommended": [
+          "Keep experiments small and focused on one clear hypothesis.",
+          "Document why a pattern works and when another approach is preferable."
+        ],
+        "pitfalls": [
+          "Turning a learning experiment into unmaintained copy-paste production code without tests."
+        ]
+      },
+      "realWorldReference": "This entire Angular Handbook workspace uses this exact pattern—combining FormControl search, signal progress persistence, and standalone components.",
+      "officialDocUrl": "https://angular.dev/tutorials"
+    }
+  ]
+}
